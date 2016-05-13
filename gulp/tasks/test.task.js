@@ -31,7 +31,6 @@ module.exports = (gulp, config, $, args) => {
             .pipe(gulp.dest('lib'));
     });
 
-    console.log('');
     gulp.task('htmlOnlyOne', () => {
 
         const options = {
