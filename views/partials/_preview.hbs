@@ -1,0 +1,55 @@
+<div ng-app="preview" ng-controller="previewCon" ng-cloak>
+<form role="form" class="form-inline" id="previewSearch" onkeydown="if(event.keyCode==13){return false;}">
+    <div class="form-group" id="selGroup">
+        <label>{[{selGroup}]}：</label>
+        <select class="form-control" title="{[{selGroup}]}" name="group" id="selectGroup">
+            <option value=""> - - - 全 部 - - -</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>{[{email}]}：</label>
+        <input type="email" placeholder="{[{importEmail}]}" name="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>{[{tel}]}：</label>
+        <input type="number" placeholder="{[{importTel}]}" name="tel" class="form-control">
+    </div>
+    <button class="btn btn-info" type="button" id="previewSearchBtn" title="{[{search}]}"><i class="fa fa-search"></i></button>
+    <div class="formMark"></div>
+</form>
+
+<div id="footBox">
+    <div class="pull-left">
+        <select name="pageNub" id="pageNub">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+        </select>
+        <span>{[{mail}]}/{[{page}]}</span>
+    </div>
+    <p id="pageInfo">
+        {[{total}]}<span id="totalInfo">1</span>{[{info}]}&nbsp; {[{perPage}]}<span id="curPageNub">1</span>{[{bar}]}&nbsp;
+        {[{total}]}<span id="totalPages">1</span>{[{page}]}&nbsp; {[{current}]}<span id="curPage">1</span>{[{page}]}
+    </p>
+    <ul class="pager">
+        <li><a href="javascript:void(0)" id="homePage">{[{homePage}]}</a></li>
+        <li><a href="javascript:void(0)" id="prePage">{[{prePage}]}</a></li>
+        <li><a href="javascript:void(0)" style="padding: 5px;"><input type="number" min="1" step="1" id="checkInput" title="{[{skip}]}"></a></li>
+        <li><a href="javascript:void(0)" id="goTo">Go</a></li>
+        <li><a href="javascript:void(0)" id="nextPage">{[{nextPage}]}</a></li>
+        <li><a href="javascript:void(0)" id="endPage">{[{endPage}]}</a></li>
+    </ul>
+</div>
+</div>
+
+<div class="sk-spinner sk-spinner-wave">
+    <div class="sk-rect1"></div>
+    <div class="sk-rect2"></div>
+    <div class="sk-rect3"></div>
+    <div class="sk-rect4"></div>
+    <div class="sk-rect5"></div>
+</div>
+
+
+<script src="/js/angularJs/_preview.js"></script>
+

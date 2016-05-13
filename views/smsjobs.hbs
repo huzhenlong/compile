@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+</head>
+<body data-job-type="sms">
+<div id="wrapper">
+    {{> menu}}
+    <div id="page-wrapper" class="gray-bg">
+        {{> top}}
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{> _mailjobs}}
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </div>
+</div>
+<!-- build:js /js/smsjobs.js -->
+
+<script src="/js/cocatn/platDao.js"></script>
+<script src="/js/tableList/taskJob.js"></script>
+<!--endbuild-->
+</body>
+</html>

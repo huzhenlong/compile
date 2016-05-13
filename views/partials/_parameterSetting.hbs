@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/part/_parameterSetting.css">
+
+<div ng-app="lv" ng-controller="lvSetting" ng-cloak>
+
+
+    <!--等级设置 开始-->
+    <div class="row wrapper border-bottom white-bg page-heading content_breadcrumb">
+        <div class="col-lg-12" style="margin-left: 5px;">
+            <h3 class="page_title">{[{lvSetting}]}</h3>
+            <button type="button" class="btn btn-white pull-right" title="{[{addLv}]}" id="addLevel">
+                <i class="fa fa-vine"></i>
+            </button>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <!--等级设置 结束-->
+
+    <!--等级模块 开始-->
+    <div class="wrapper wrapper-content">
+        <div class="row" id="LvRow">
+        </div>
+    </div>
+    <!--等级模块 结束-->
+
+    <!--等级配置 开始-->
+    <div class="row wrapper border-bottom white-bg page-heading content_breadcrumb" style="margin-bottom: 15px;">
+        <div class="col-lg-12" style="margin-left: 5px;">
+            <h3 class="page_title">{[{lvConfig}]}</h3>
+            <button type="button" class="btn btn-white pull-right borderColor" title="{[{brandConfig}]}" id="brandConfig" disabled>
+                <i class="fa fa-sitemap"></i>
+            </button>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <!--等级配置 结束-->
+
+    <!--配置 开始-->
+    <div class="tabs-container" id="configContent">
+    </div>
+    <!--配置 结束-->
+
+</div>
+
+<script src="/js/angularJs/_parameterSetting.js"></script>

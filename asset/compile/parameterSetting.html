@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- build:css /css/main.css -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrapValidator.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+    
+    <link href="/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="/css/plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="/css/plugins/letterfx/jquery-letterfx.min.css" rel="stylesheet">
+    
+    
+    <link href="/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="/css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+    
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="/css/workflow.css" rel="stylesheet">
+    <!-- endbuild -->
+    
+    
+    <!-- build:js /js/main.js -->
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/plugins/bootstrapValidator/bootstrapValidator.min.js"></script>
+    <script src="/js/plugins/jquery-ui/jquery.cookie.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/react/react.min.js"></script>
+    <script src="/js/react/react-dom.min.js"></script>
+    <script src="/js/react/browser.min.js"></script>
+    
+    <script src="/js/plugins/md5/md5.min.js"></script>
+    <script src="/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/select2/select2.full.min.js"></script>
+    <script src="/js/plugins/toastr/toastr.min.js"></script>
+    <script src="/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    
+    <script src="/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+    <script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="/js/plugins/letterfx/jquery-letterfx.min.js"></script>
+    
+    <script src="/js/inspinia.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/common.js"></script>
+    
+    <script src="/js/cocatn/workflowDao.js"></script>
+    <script src="/js/cocatn/smartgroupDao.js"></script>
+    <script src="/js/cocatn/platformDao.js"></script>
+    <script src="/js/cocatn/platDao.js"></script>
+    <script src="/js/cocatn/personalizeDao.js"></script>
+    
+    <script src="/lang/lang.js"></script>
+    <script src="/lang/selectLang.js"></script>
+    
+    <script src="/js/constants.js"></script>
+    
+    <script src="/js/plugins/navMenu/navMenuPlugin.js"></script>
+    
+    <script src="/js/plugins/modal/modal.form.js"></script>
+    
+    <script src="/js/job/sendEmail.js"></script>
+    <script src="/js/job/sendSms.js"></script>
+    
+    <script src="/js/smartgroup/smartgroupPlugin.js"></script>
+    <script src="/js/smartgroup/smartgroup.filter.js"></script>
+    
+    <script src="/js/plugins/loading/prefixfree.min.js"></script>
+    <!-- endbuild -->
+        <!-- build:css /css/smartGroupModal.css -->
+
+    <link rel="stylesheet" href="/css/plugins/smartGroupModal/smartGroupModal.css">
+        <!-- endbuild -->
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="navMenuBox"></div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div id="levelSetting" class="active">
+
+            <link rel="stylesheet" href="/css/part/_parameterSetting.css">
+            
+            <div ng-app="lv" ng-controller="lvSetting" ng-cloak>
+            
+            
+                <!--等级设置 开始-->
+                <div class="row wrapper border-bottom white-bg page-heading content_breadcrumb">
+                    <div class="col-lg-12" style="margin-left: 5px;">
+                        <h3 class="page_title">{[{lvSetting}]}</h3>
+                        <button type="button" class="btn btn-white pull-right" title="{[{addLv}]}" id="addLevel">
+                            <i class="fa fa-vine"></i>
+                        </button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <!--等级设置 结束-->
+            
+                <!--等级模块 开始-->
+                <div class="wrapper wrapper-content">
+                    <div class="row" id="LvRow">
+                    </div>
+                </div>
+                <!--等级模块 结束-->
+            
+                <!--等级配置 开始-->
+                <div class="row wrapper border-bottom white-bg page-heading content_breadcrumb" style="margin-bottom: 15px;">
+                    <div class="col-lg-12" style="margin-left: 5px;">
+                        <h3 class="page_title">{[{lvConfig}]}</h3>
+                        <button type="button" class="btn btn-white pull-right borderColor" title="{[{brandConfig}]}" id="brandConfig" disabled>
+                            <i class="fa fa-sitemap"></i>
+                        </button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <!--等级配置 结束-->
+            
+                <!--配置 开始-->
+                <div class="tabs-container" id="configContent">
+                </div>
+                <!--配置 结束-->
+            
+            </div>
+            
+            <script src="/js/angularJs/_parameterSetting.js"></script>
+        </div>
+
+
+        <div class="x-footer">
+            <div>
+                <strong>Copyright</strong> Xrewin Company &copy; 2015-2016
+            </div>
+        </div>    </div>
+</div>
+<!-- build:js /js/parameterSetting.js -->
+
+<script src="/js/plugins/navMenu/navMenu.js"></script>
+
+<script src="/js/smartgroup/smartgroup.filter.js"></script>
+<script src="/js/plugins/smartGroupModal/smartGroupModal.js"></script>
+<script src="/js/plugins/customTab/customTab.js"></script>
+<script src="/js/parameterSetting/levelSetting.js"></script>
+<!--endbuild-->
+
+</body>
+</html>

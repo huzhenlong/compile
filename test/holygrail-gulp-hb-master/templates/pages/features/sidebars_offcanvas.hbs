@@ -1,0 +1,35 @@
+---
+title: Off-canvas Sidebars
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/sidebars_affix.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Features - Off-canvas Sidebars
+sidebar_right_partials:
+- components/sidebar/sitevars
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <div class="alert info">
+            <p><strong>NOTICE!</strong> The off-canvas fly-out sidebars (affectionately known as "Cider") are an opt-in feature.</p>
+
+            <p><strong>NOTICE!</strong> When the off-canvas sidebars are shown any <code>.well</code>'s contained will lose their padding, border, and background.</p>
+
+            <p>If the off-canvas sidebars are disabled then the sidebars will move themselves below the main <code>#content</code> <code>div</code>.</p>
+        </div>
+
+        <p>To enable the off-canvas sidebars you must ensure <code>$fh_cider_enabled</code> is set the <code>true</code>. Also make sure you're pulling in the <code>sidebars.js</code> asset as well.</p>
+
+        <p>To see the off-canvas sidebars just resize your browser or check out the GIF below!</p>
+
+        <img class="size-full" src="{{ file.frontMatter.base_url }}{{ img_base_url }}/animations/offcanvas_sidebars.gif" alt="Off-canvas Sidebars in Action">
+
+    {{/content}}
+
+{{/extend}}

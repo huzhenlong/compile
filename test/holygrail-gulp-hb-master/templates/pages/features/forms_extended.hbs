@@ -1,0 +1,554 @@
+---
+title: Forms Extended
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/forms.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Features - Forms Extended
+sidebar_right_partials:
+- components/sidebar/forms_extended
+sidebar_affix: true
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <a id="buttons"></a>
+
+        <h3>Button Sizing/Colors:</h3>
+
+        <div class="field">
+            <label>Button Colors (provided by theme):</label>
+            <button>No classes</button>
+            <button class="btn info">.btn.info</button>
+            <button class="btn success">.btn.success</button>
+            <button class="btn warn">.btn.warn</button>
+            <button class="btn danger">.btn.danger</button>
+        </div>
+
+        <div class="field">
+            <label>Button States (provided by theme):</label>
+            <button class="btn default">.btn.default</button>
+            <button class="btn disabled">.btn.disabled</button>
+        </div>
+
+        <div class="field">
+            <label>Button Sizes (provided by theme):</label>
+            <button class="btn xs">.btn.xs</button>
+            <button class="btn sm">.btn.sm</button>
+            <button class="btn">.btn</button>
+            <button class="btn lg">.btn.lg</button>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>Button Colors (provided by theme):&lt;/label>
+    &lt;button>No classes&lt;/button>
+    &lt;button class="btn info">.btn.info&lt;/button>
+    &lt;button class="btn success">.btn.success&lt;/button>
+    &lt;button class="btn warn">.btn.warn&lt;/button>
+    &lt;button class="btn danger">.btn.danger&lt;/button>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Button States (provided by theme):&lt;/label>
+    &lt;button class="btn default">.btn.default&lt;/button>
+    &lt;button class="btn disabled">.btn.disabled&lt;/button>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Button Sizes (provided by theme):&lt;/label>
+    &lt;button class="btn xs">.btn.xs&lt;/button>
+    &lt;button class="btn sm">.btn.sm&lt;/button>
+    &lt;button class="btn">.btn&lt;/button>
+    &lt;button class="btn lg">.btn.lg&lt;/button>
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="input_sizes"></a>
+
+        <h3>Single-line Input Sizes:</h3>
+
+        <h4>Extra Small</h4>
+
+        <div class="field">
+            <label>Extra Small (.input.xs):</label>
+            <input class="input xs" type="text" value="Default text">
+        </div>
+
+        <div class="field">
+            <label>Extra Small (.input.xs):</label>
+            <select class="input xs">
+                <option>Default Option</option>
+            </select>
+        </div>
+
+        <h4>Small</h4>
+
+        <div class="field">
+            <label>Small (.input.sm):</label>
+            <input class="input sm" type="text" value="Default text">
+        </div>
+
+        <div class="field">
+            <label>Small (.input.sm):</label>
+            <select class="input sm">
+                <option>Default Option</option>
+            </select>
+        </div>
+
+        <h4>Default</h4>
+
+        <div class="field">
+            <label>Default (no classes):</label>
+            <input type="text" value="Default text">
+        </div>
+
+        <div class="field">
+            <label>Default (no classes):</label>
+            <select>
+                <option>Default Option</option>
+            </select>
+        </div>
+
+        <h4>Large</h4>
+
+        <div class="field">
+            <label>Large (.input.lg):</label>
+            <input class="input lg" type="text" value="Default text">
+        </div>
+
+        <div class="field">
+            <label>Large (.input.lg):</label>
+            <select class="input lg">
+                <option>Default Option</option>
+            </select>
+        </div>
+
+        <pre><code class="language-markup">&lt;h4>Extra Small&lt;/h4>
+
+&lt;div class="field">
+    &lt;label>Extra Small (.input.xs):&lt;/label>
+    &lt;input class="input xs" type="text" value="Default text">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Extra Small (.input.xs):&lt;/label>
+    &lt;select class="input xs">
+        &lt;option>Default Option&lt;/option>
+    &lt;/select>
+&lt;/div>
+
+&lt;h4>Small&lt;/h4>
+
+&lt;div class="field">
+    &lt;label>Small (.input.sm):&lt;/label>
+    &lt;input class="input sm" type="text" value="Default text">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Small (.input.sm):&lt;/label>
+    &lt;select class="input sm">
+        &lt;option>Default Option&lt;/option>
+    &lt;/select>
+&lt;/div>
+
+&lt;h4>Default&lt;/h4>
+
+&lt;div class="field">
+    &lt;label>Default (no classes):&lt;/label>
+    &lt;input type="text" value="Default text">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Default (no classes):&lt;/label>
+    &lt;select>
+        &lt;option>Default Option&lt;/option>
+    &lt;/select>
+&lt;/div>
+
+&lt;h4>Large&lt;/h4>
+
+&lt;div class="field">
+    &lt;label>Large (.input.lg):&lt;/label>
+    &lt;input class="input lg" type="text" value="Default text">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Large (.input.lg):&lt;/label>
+    &lt;select class="input lg">
+        &lt;option>Default Option&lt;/option>
+    &lt;/select>
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="help"></a>
+
+        <h3>Help Text:</h3>
+
+        <div class="field">
+            <label>Single-line <code>input</code> Field w/Help:</label>
+            <input id="check_1" class="check_height" type="text" value="Default text">
+            <p class="help">Testing help test (p element below input with class .help)</p>
+        </div>
+
+        <a id="required"></a>
+
+        <h3>Required Asterisk</h3>
+
+        <div class="field required">
+            <label>Required <code>input</code> Field:</label>
+            <input type="text" value="Default text">
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>Single-line &lt;code>input&lt;/code> Field w/Help:&lt;/label>
+    &lt;input id="check_1" class="check_height" type="text" value="Default text">
+    &lt;p class="help">Testing help test (p element below input with class .help)&lt;/p>
+&lt;/div>
+
+&lt;div class="field required">
+    &lt;label>Required &lt;code>input&lt;/code> Field:&lt;/label>
+    &lt;input type="text" value="Default text">
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="validation"></a>
+
+        <h3>Validation Status</h3>
+
+        <div class="field danger">
+            <label>Text <code>input</code> Field <code>.danger</code>:</label>
+            <input type="text">
+        </div>
+
+        <div class="field success">
+            <label>Small Select Field <code>.input.sm.success</code>:</label>
+            <select class="input sm">
+                <option>Default Option</option>
+                <option>Option #2</option>
+            </select>
+        </div>
+
+        <div class="field required danger">
+            <label>Required Radio <code>input</code> Field:</label>
+            <div class="radio">
+                <label><input type="radio"> Radio 1</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio"> Radio 2</label>
+            </div>
+        </div>
+
+        <fieldset class="danger">
+            <legend>Legend</legend>
+            <div class="radio">
+                <label><input type="radio"> Radio button 1</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" checked="checked"> Radio button 2 (initially checked)</label>
+            </div>
+        </fieldset>
+
+        <div class="field info">
+            <label><code>.input_group</code> <code>.info</code></label>
+            <div class="input_group">
+                <span class="addon">@</span>
+                <input type="text" class="input" placeholder="User">
+            </div>
+        </div>
+
+        <div class="field success">
+            <label><code>.input_group</code> <code>.success</code></label>
+            <div class="input_group">
+                <span class="addon">@</span>
+                <input type="text" class="input" placeholder="User">
+            </div>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field danger">
+    &lt;label>Text &lt;code>input&lt;/code> Field &lt;code>.danger&lt;/code>:&lt;/label>
+    &lt;input type="text">
+&lt;/div>
+
+&lt;div class="field success">
+    &lt;label>Small Select Field &lt;code>.input.sm.success&lt;/code>:&lt;/label>
+    &lt;select class="input sm">
+        &lt;option>Default Option&lt;/option>
+        &lt;option>Option #2&lt;/option>
+    &lt;/select>
+&lt;/div>
+
+&lt;div class="field required danger">
+    &lt;label>Required Radio &lt;code>input&lt;/code> Field:&lt;/label>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio"> Radio 1&lt;/label>
+    &lt;/div>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio"> Radio 2&lt;/label>
+    &lt;/div>
+&lt;/div>
+
+&lt;fieldset class="danger">
+    &lt;legend>Legend&lt;/legend>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio"> Radio button 1&lt;/label>
+    &lt;/div>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio" checked="checked"> Radio button 2 (initially checked)&lt;/label>
+    &lt;/div>
+&lt;/fieldset>
+
+&lt;div class="field info">
+    &lt;label>&lt;code>.input_group&lt;/code> &lt;code>.info&lt;/code>&lt;/label>
+    &lt;div class="input_group">
+        &lt;span class="addon">@&lt;/span>
+        &lt;input type="text" class="input" placeholder="User">
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field success">
+    &lt;label>&lt;code>.input_group&lt;/code> &lt;code>.success&lt;/code>&lt;/label>
+    &lt;div class="input_group">
+        &lt;span class="addon">@&lt;/span>
+        &lt;input type="text" class="input" placeholder="User">
+    &lt;/div>
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="input_groups"></a>
+
+        <h3>Input Groups</h3>
+
+        <h4>Add-ons:</h4>
+
+        <div class="field">
+            <label><code>.input_group</code> Add-on Before Input</label>
+            <div class="input_group">
+                <span class="addon">Before</span>
+                <input type="text" class="input">
+            </div>
+        </div>
+
+        <div class="field">
+            <label><code>.input_group</code> Add-on After Input</label>
+            <div class="input_group">
+                <input type="text" class="input">
+                <span class="addon">After</span>
+            </div>
+        </div>
+
+        <div class="field">
+            <label><code>.input_group</code> Input Wrapped by Add-ons</label>
+            <div class="input_group">
+                <span class="addon">$</span>
+                <input type="text" class="input">
+                <span class="addon">.00</span>
+            </div>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>&lt;code>.input_group&lt;/code> Add-on Before Input&lt;/label>
+    &lt;div class="input_group">
+        &lt;span class="addon">Before&lt;/span>
+        &lt;input type="text" class="input">
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>&lt;code>.input_group&lt;/code> Add-on After Input&lt;/label>
+    &lt;div class="input_group">
+        &lt;input type="text" class="input">
+        &lt;span class="addon">After&lt;/span>
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>&lt;code>.input_group&lt;/code> Input Wrapped by Add-ons&lt;/label>
+    &lt;div class="input_group">
+        &lt;span class="addon">$&lt;/span>
+        &lt;input type="text" class="input">
+        &lt;span class="addon">.00&lt;/span>
+    &lt;/div>
+&lt;/div></code></pre>
+
+        <h4>Buttons:</h4>
+
+        <div class="field">
+            <label><code>.input_group</code> w/Button Before</label>
+            <div class="input_group">
+                <span class="group_btn">
+                    <button class="btn" type="button">Search &raquo;</button>
+                </span>
+                <input type="text" class="input" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="field">
+            <label><code>.input_group</code> w/Button After</label>
+            <div class="input_group">
+                <input type="text" class="input" placeholder="Search">
+                <span class="group_btn">
+                    <button class="btn default" type="button">Engage &raquo;</button>
+                </span>
+            </div>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>&lt;code>.input_group&lt;/code> w/Button Before&lt;/label>
+    &lt;div class="input_group">
+        &lt;span class="group_btn">
+            &lt;button class="btn" type="button">Search &raquo;&lt;/button>
+        &lt;/span>
+        &lt;input type="text" class="input" placeholder="Search">
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>&lt;code>.input_group&lt;/code> w/Button After&lt;/label>
+    &lt;div class="input_group">
+        &lt;input type="text" class="input" placeholder="Search">
+        &lt;span class="group_btn">
+            &lt;button class="btn default" type="button">Engage &raquo;&lt;/button>
+        &lt;/span>
+    &lt;/div>
+&lt;/div></code></pre>
+
+        <h4>Sizing:</h4>
+
+        <div class="field">
+            <label>Extra-small <code>.input_group.xs</code> w/Add-on</label>
+            <div class="input_group xs">
+                <span class="addon">@</span>
+                <input type="text" class="input" placeholder="Username">
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Extra-small <code>.input_group.xs</code> w/Button</label>
+            <div class="input_group xs">
+                <input type="text" class="input" placeholder="Search Website">
+                <span class="group_btn">
+                    <button class="btn default" type="button">Search &raquo;</button>
+                </span>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Small <code>.input_group.sm</code> w/Add-on</label>
+            <div class="input_group sm">
+                <span class="addon">@</span>
+                <input type="text" class="input" placeholder="Username">
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Normal <code>.input_group</code> w/Add-on</label>
+            <div class="input_group sm">
+                <span class="addon">@</span>
+                <input type="text" class="input" placeholder="Username">
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Large <code>.input_group</code> w/Add-on</label>
+            <div class="input_group lg">
+                <span class="addon">@</span>
+                <input type="text" class="input" placeholder="Username">
+            </div>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>Extra-small &lt;code>.input_group.xs&lt;/code> w/Add-on&lt;/label>
+    &lt;div class="input_group xs">
+        &lt;span class="addon">@&lt;/span>
+        &lt;input type="text" class="input" placeholder="Username">
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Extra-small &lt;code>.input_group.xs&lt;/code> w/Button&lt;/label>
+    &lt;div class="input_group xs">
+        &lt;input type="text" class="input" placeholder="Search Website">
+        &lt;span class="group_btn">
+            &lt;button class="btn default" type="button">Search &raquo;&lt;/button>
+        &lt;/span>
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Small &lt;code>.input_group.sm&lt;/code> w/Add-on&lt;/label>
+    &lt;div class="input_group sm">
+        &lt;span class="addon">@&lt;/span>
+        &lt;input type="text" class="input" placeholder="Username">
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Normal &lt;code>.input_group&lt;/code> w/Add-on&lt;/label>
+    &lt;div class="input_group sm">
+        &lt;span class="addon">@&lt;/span>
+        &lt;input type="text" class="input" placeholder="Username">
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Large &lt;code>.input_group&lt;/code> w/Add-on&lt;/label>
+    &lt;div class="input_group lg">
+        &lt;span class="addon">@&lt;/span>
+        &lt;input type="text" class="input" placeholder="Username">
+    &lt;/div>
+&lt;/div></code></pre>
+
+        <h4>Checkboxes/Radios:</h4>
+
+        <div class="field">
+            <label><code>.input_group</code> w/Checkbox Add-on</label>
+            <div class="input_group">
+                <span class="addon">
+                    <input type="checkbox">
+                </span>
+                <input type="text" class="input">
+            </div>
+        </div>
+
+        <div class="field">
+            <label><code>.input_group</code> w/Radio Add-on</label>
+            <div class="input_group">
+                <span class="addon">
+                    <input type="radio">
+                </span>
+                <input type="text" class="input">
+            </div>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>&lt;code>.input_group&lt;/code> w/Checkbox Add-on&lt;/label>
+    &lt;div class="input_group">
+        &lt;span class="addon">
+            &lt;input type="checkbox">
+        &lt;/span>
+        &lt;input type="text" class="input">
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>&lt;code>.input_group&lt;/code> w/Radio Add-on&lt;/label>
+    &lt;div class="input_group">
+        &lt;span class="addon">
+            &lt;input type="radio">
+        &lt;/span>
+        &lt;input type="text" class="input">
+    &lt;/div>
+&lt;/div></code></pre>
+
+    {{/content}}
+
+{{/extend}}

@@ -1,0 +1,31 @@
+// Open Sans > Helvetica fools
+$fh_type_font_base : "Open Sans", sans-serif;
+
+// Font Paths
+$OpenSansPath: "../fonts/vendor/open_sans";
+$fa-font-path: "../fonts/vendor/font_awesome";
+
+$fh_hg_sidebar_affix_enabled : true;
+
+$fh_nav_h: 80px;
+
+$fh_foot_bg_color : #000;
+$fh_foot_bdr_top  : darken( $fh_foot_bg_color, 10% );
+
+$modular-scale-base: 1.1rem;
+$fh_type_respd_enabled: true;
+
+// Enable all the layouts:
+$fh_layouts_default_enabled : (
+  "one_full"        : true,
+  "two_left_1"      : true,
+  "two_left_2"      : true,
+  "two_right_1"     : true,
+  "two_right_2"     : true,
+  "three_left_1"    : true,
+  "three_left_2"    : true,
+  "three_right_1"   : true,
+  "three_right_2"   : true,
+  "three_wrapped_1" : true,
+  "three_wrapped_2" : true,
+) !default;

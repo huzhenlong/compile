@@ -1,0 +1,39 @@
+---
+title: August 2014
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: interfaces/articles.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Articles - Browse
+sidebar_right_partials:
+- components/sidebar/sitevars
+---
+{{#extend "layouts/holygrail"}}
+
+  {{#content "pre_h1" }}
+
+    <section id="articles">
+
+    <p id="pre_browse_by">Articles published in</p>
+
+  {{/content}}
+
+  {{#content "content" }}
+
+    {{> "components/articles/browse_by_date" }}
+
+  {{/content}}
+
+  {{#content "post_content" }}
+
+    </section>
+
+    {{> "components/pagination/simple" }}
+
+  {{/content}}
+
+{{/extend}}

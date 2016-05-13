@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/public/js/smartgroup/smartgroup.filter-compiled.js" />
+        <item url="file://$PROJECT_DIR$/routes/test-compiled.js" />
+        <item url="file://$PROJECT_DIR$/gulp/tasks/test.task-compiled.js" />
+        <item url="file://$PROJECT_DIR$/public/js/smartgroup/smart-compiled.js" />
+        <item url="file://$PROJECT_DIR$/app-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/public/js/utils-compiled.js" />
+      <root url="file://$PROJECT_DIR$/gulpfile-compiled.js" />
+      <root url="file://$PROJECT_DIR$/public/js/smartgroup/smartgroup.filter-compiled.js" />
+      <root url="file://$PROJECT_DIR$/routes/test-compiled.js" />
+      <root url="file://$PROJECT_DIR$/gulp/tasks/test.task-compiled.js" />
+      <root url="file://$PROJECT_DIR$/public/js/smartgroup/smart-compiled.js" />
+      <root url="file://$PROJECT_DIR$/app-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

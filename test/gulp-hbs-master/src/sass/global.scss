@@ -1,0 +1,20 @@
+
+
+@import "partials/base";
+@import "partials/typography";
+
+@import "modules/main-navigation";
+@import "modules/footer";
+
+body {
+    background-color: #fff;
+    font-size: 1em;
+}
+
+.wrapper-outer {
+    padding: 1em;
+}
+
+.wrapper-inner {
+    background-color: #fff;
+}

@@ -1,0 +1,17 @@
+//
+//  Grids
+//
+
+// scss-lint:disable IdSelector
+
+// Add a test border so that we can see things like grids
+.test_border { border: 1px $fh_color_info solid; }
+
+// Override Grid Dude's wells (setup a custom class eventually)
+#grid_dude .well {
+  background: #444;
+  border: 0;
+  margin-bottom: 0;
+  padding: 0;
+  height: 45px;
+}

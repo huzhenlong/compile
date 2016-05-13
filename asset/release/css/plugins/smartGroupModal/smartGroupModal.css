@@ -1,0 +1,45 @@
+.popover {
+    position: absolute;
+    z-index: 9999;
+}
+
+.select2-container {
+    z-index: 10000;
+}
+
+.sg-content {
+    width: 800px;
+    margin-left: -100px;
+}
+
+.sm-row-button {
+    margin-bottom: 5px;
+}
+
+.sg-body {
+    padding: 15px 10px 10px;
+}
+
+.dataTables_wrapper {
+    padding-bottom: 0;
+}
+
+.sg-modal-body {
+    padding: 10px 30px 0;
+}
+
+.sg-tabs-container {
+    margin-bottom: 10px;
+}
+
+.selectRow {
+    background: #eee;
+}
+
+input.inputBox {
+    width:160px;
+}
+
+
+
+

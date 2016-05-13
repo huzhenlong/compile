@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <link rel="stylesheet" href="/css/headerCss.css?v=10ec9e2a89">
+    
+    
+    <script src="/js/headerJsTotalCase.js?v=a67bc085fb"></script>
+    
+
+</head>
+<body>
+
+<link rel="stylesheet" href="/css/loading.css?v=1f18a7ce7f">
+<div id="xrewinLoadingWrap">
+    <canvas id="c"></canvas>
+    <div class="xremin-mask"></div>
+</div>
+<script src="/js/loading.js?v=cc7a738f1c"></script>
+
+
+<link rel="stylesheet" href="/css/part/_totalCase.css">
+
+<div ng-app="chart" ng-controller="chartInfo" ng-cloak>
+    <!--header start-->
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header" style="text-align: center;float: none;">
+            <a class="navbar-brand" href="#" style="float: none;display: block;color:#fff;">{[{taskData}]}</a>
+        </div>
+    </nav>
+    <!--header end-->
+
+    <!--tab start-->
+    <div id="tabs"></div>
+    <!--tab end-->
+
+    <!--总体情况 start-->
+    <div id="totalCase" style="display: none;">
+        <div class="ibox">
+            <h4>{[{taskInfo}]}</h4>
+
+            <!--任务信息列表-->
+            <div class="ibox-content taskTable" style="padding: 15px 20px 20px 20px;"></div>
+        </div>
+        <div class="ibox">
+            <h4>{[{totalCase}]}</h4>
+
+            <!--总体情况列表-->
+            <div class="ibox-content totalTable" style="padding: 15px 20px 20px 20px;"></div>
+        </div>
+    </div>
+    <!--总体情况 end-->
+
+    <!--点击情况 start-->
+    <div id="clickCase" style="display: none;">
+        <h1>{[{clickCase}]}</h1>
+
+        <div class="ibox">
+            <div class="ibox-content" style="padding: 15px 20px 20px 20px;">
+
+                <!--点击情况table-->
+                <table class="table table-striped table-bordered table-hover" id="clickCaseTable"></table>
+
+            </div>
+        </div>
+    </div>
+    <!--点击情况 end-->
+
+    <!--点击热图 start-->
+    <div id="clickMap" style="display: none;">
+        <h1>{[{clickMap}]}</h1>
+
+        <div class="ibox">
+            <div class="ibox-content" style="padding: 15px 20px 20px 20px;">
+                <div id="heatMaps" style="width: 650px;margin: 0 auto;position: relative;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--点击热图 end-->
+
+    <!--预览 start-->
+
+    <div id="reportPreview" style="display: none;">
+        <div id="wrapper">
+            <form role="form" class="form-inline" id="previewSearch" onkeydown="if(event.keyCode==13){return false;}">
+                <div class="form-group">
+                    <label>{[{email}]}：</label>
+                    <input type="email" placeholder="{[{importEmail}]}" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>{[{tel}]}：</label>
+                    <input type="number" placeholder="{[{importTel}]}" name="tel" class="form-control">
+                </div>
+                <button class="btn btn-info" type="button" id="previewSearchBtn" title="{[{search}]}"><i class="fa fa-search"></i>
+                </button>
+                <div class="formMark"></div>
+            </form>
+
+            <div id="footBox">
+                <div class="pull-left">
+                    <select name="pageNub" id="pageNub">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                    </select>
+                    <span>{[{mail}]}/{[{page}]}</span>
+                </div>
+                <p id="pageInfo">
+                    {[{total}]}<span id="totalInfo">1</span>{[{info}]}&nbsp; {[{perPage}]}<span id="curPageNub">1</span>{[{bar}]}&nbsp;
+                    {[{total}]}<span id="totalPages">1</span>{[{page}]}&nbsp; {[{current}]}<span id="curPage">1</span>{[{page}]}
+                </p>
+                <ul class="pager">
+                    <li><a href="javascript:void(0)" id="homePage">{[{homePage}]}</a></li>
+                    <li><a href="javascript:void(0)" id="prePage">{[{prePage}]}</a></li>
+                    <li><a href="javascript:void(0)" style="padding: 5px;"><input type="number" min="1" step="1"
+                                                                                  id="checkInput"
+                                                                                  title="{[{skip}]}"></a></li>
+                    <li><a href="javascript:void(0)" id="goTo">Go</a></li>
+                    <li><a href="javascript:void(0)" id="nextPage">{[{nextPage}]}</a></li>
+                    <li><a href="javascript:void(0)" id="endPage">{[{endPage}]}</a></li>
+                </ul>
+            </div>
+            <div class="sk-spinner sk-spinner-wave">
+                <div class="sk-rect1"></div>
+                <div class="sk-rect2"></div>
+                <div class="sk-rect3"></div>
+                <div class="sk-rect4"></div>
+                <div class="sk-rect5"></div>
+            </div>
+        </div>
+    </div>
+    <!--预览 end-->
+
+    <!--发送七天分时段统计 start-->
+    <div id="period-statistics" style="display: none;">
+        <h1>{[{dayPart}]}</h1>
+
+        <div class="ibox">
+            <div class="ibox-content" style="padding: 15px 20px 20px 20px;">
+                <!--分阶段chart-->
+                <div id="histogram" style="width: 1000px;height: 600px;margin: 0 auto;"></div>
+
+                <!--分阶段table-->
+                <div class="table-responsive" style="padding-top: 20px;    border-top:1px solid #e7eaec;">
+                    <table class="table table-striped table-bordered table-hover" id="periodTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--发送七天分时段统计 end-->
+
+    <!--客户端 start-->
+    <div id="clientWrap" style="display: none;">
+        <h1>{[{client}]}</h1>
+
+        <div class="ibox">
+            <div class="ibox-content" style="padding: 15px 20px 20px 20px;">
+                <!--分阶段chart-->
+                <div id="clientStatistics" style="width: 1000px;height: 600px;margin: 0 auto;"></div>
+
+                <!--分阶段table-->
+                <div class="table-responsive" style="padding-top: 20px;    border-top:1px solid #e7eaec;">
+                    <table class="table table-striped table-bordered table-hover" id="clientTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--客户端 end-->
+</div>
+
+
+<script src="/js/angularJs/_totalCase.js?v=f11a8a40a0"></script><div style="display: none;"></div>
+
+<script src="/js/_totalCase.js?v=f11a8a40a0"></script>
+</body>
+</html>

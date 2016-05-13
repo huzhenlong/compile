@@ -1,0 +1,58 @@
+---
+title: Pagination
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/pagination.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Features - Pagination
+sidebar_right_partials:
+- components/sidebar/sitevars
+---
+
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <nav class="text_center">
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="active"><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </nav>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;nav class="text_center">
+  &lt;ul class="pagination">
+    &lt;li>&lt;a href="#">&laquo;&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">1&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">2&lt;/a>&lt;/li>
+    &lt;li class="active">&lt;a href="#">3&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">4&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">5&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">6&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">7&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">8&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">9&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">10&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">&raquo;&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/nav></code></pre>
+
+    {{/content}}
+
+{{/extend}}

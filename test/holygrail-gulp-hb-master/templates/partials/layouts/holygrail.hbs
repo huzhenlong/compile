@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+{{> "components/head/head_html" }}
+
+</head>
+
+<body class="{{{ file.frontMatter.body_class }}}">
+
+{{{block "pre_global"}}}
+
+{{> "components/nav/default_nav" }}
+{{> "components/head/default_head" }}
+
+{{{block "pre_main"}}}
+
+<div class="body_wrap">
+
+    {{! Main Content / Sidebars }}
+    <div id="main" class="clearfix {{{layout_class file.frontMatter.template_code_class }}}">
+
+        {{! Gutter Main }}
+        <div class="gutter_main">
+
+            {{! Content }}
+            <div id="content">
+
+            {{! Gutter Content }}
+                <div class="gutter_content">
+
+                    {{{block "pre_breadcrumbs"}}}
+
+                    {{#if file.frontMatter.breadcrumbs }}
+                        <div id="breadcrumbs">
+                            {{{crumbs file.frontMatter.breadcrumbs this }}}
+                        </div>
+                    {{/if }}
+
+                    {{{block "pre_h1"}}}
+
+                    {{#unless file.frontMatter.disable_page_title }}
+                        {{#if file.frontMatter.title }}
+                            <h1>{{{ file.frontMatter.title }}}</h1>
+                        {{/if }}
+                    {{/unless }}
+
+                    {{{block "pre_content"}}}
+
+                    {{{block "content"}}}
+
+                    {{{block "post_content"}}}
+
+                </div>
+            </div>
+
+            {{! Sidebar Rendering }}
+            <div id="asides_wrap">
+
+                {{{render_sidebars file.frontMatter.template_code_class file.frontMatter.sidebar_left_partials file.frontMatter.sidebar_right_partials file.frontMatter.sidebar_affix this }}}
+
+            </div>
+
+        </div>
+
+        {{! Cider Buttons: }}
+        {{! TODO: Opt-in feature }}
+        <button id="cider_left_btn" class="cider_btn" style="display: none;">
+            <img src="{{ file.frontMatter.base_url }}{{ img_base_url }}/vendor/holygrail/cider_left.svg" alt="Show Left Sidebar">
+        </button>
+
+        <button id="cider_right_btn" class="cider_btn" style="display: none;">
+            <img src="{{ file.frontMatter.base_url }}{{ img_base_url }}/vendor/holygrail/cider_right.svg" alt="Show Right Sidebar">
+        </button>
+    </div>
+</div>
+
+{{{block "post_main"}}}
+
+{{> "components/foot/default_foot" }}
+{{> "components/foot/foot_html" }}
+
+{{{block "post_global"}}}
+
+</body>
+</html>

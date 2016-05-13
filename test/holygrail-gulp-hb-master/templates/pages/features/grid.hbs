@@ -1,0 +1,444 @@
+---
+title: Grid
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/grid.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Grid
+sidebar_right_partials:
+- components/sidebar/grid
+sidebar_affix: true
+---
+{{#extend "layouts/holygrail"}}
+
+  {{#content "content" }}
+
+    <p>A very special thanks is owed to the guys over at <a href="http://www.basscss.com/docs/grid/" target="_blank">BASSCSS</a> for their super-simplistic and bullet-proof grid! The Holy Grail grid is an extension on their grid with the ability to "push" or offset columns and define how many columns you would like to use.</p>
+
+    <hr>
+
+    <a id="config"></a>
+
+    <h3>Defining the Number of Columns:</h3>
+
+    <p>To define the number of columns just set the <code>$fh_grid_num_cols</code> SASS configuration variable to whatever number you would like! The default configuration is a <strong>12 column grid</strong>.</p>
+
+    <pre><code class="language-scss">$fh_grid_num_cols : 24;</code></pre>
+
+    <hr>
+
+    <h3>Defining Custom Responsive Breakpoints:</h3>
+
+    <p>To set custom responsive breakpoints you can either override <code>$fh_type_respd_bkpt_1</code> or <code>$fh_type_respd_bkpt_2</code> or completely override <code>$fh_grids</code>.</p>
+
+    <p>The <code>$fh_grids</code> map is iterated over to setup each grid-system at each respective breakpoint. If you pass <code>false</code> as the value in the key-value pair there will be no breakpoint associated to that grid (as you can see below with the default <code>.col</code> class).</p>
+
+    <pre><code class="language-scss">$fh_grids : (
+  "col"    : false,
+  "col_lg" : $fh_type_respd_bkpt_1,
+  "col_sm" : $fh_type_respd_bkpt_2
+);</code></pre>
+
+    <hr>
+
+    <a id="grid_container"></a>
+
+    <h3>The <code>.grid</code> Container:</h3>
+
+    <p>When dealing with grids that have gutters you will want to add a <code>.grid</code> wrapper around your grid. By adding this utility class you avoid issues with overflow negative margins as well as enforcing a 100% width... horizontal scroll issues are bad mmmmk.</p>
+
+    <pre><code class="language-scss">// Wrap to avoid overflow negative margins from gutter'd columns
+#{$fh_grid_row_class} {
+
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}</code></pre>
+
+    <hr>
+
+    <a id="floats"></a>
+
+    <h3>Floats, <code>box-sizing</code>, and <code>border-box</code>:</h3>
+
+    <p>Float columns by utilizing the <code>.col</code> class. This will also set the <code>box-sizing</code> and <code>border-box</code> of the column.</p>
+
+    <p>Since we're utilizing a float-based grid system we need to wrap our rows with a <code>.clearfix</code>'d <code>div</code>.</p>
+
+    <div class="clearfix test_border">
+
+        <!-- Span 6 columns: -->
+        <div class="col col_6 test_border">.col.col_6</div>
+
+        <!-- Span 6 columns: -->
+        <div class="col col_6 test_border">.col.col_6</div>
+
+    </div>
+
+    <br>
+
+    <pre><code class="language-markup">&lt;div class="clearfix test_border">
+
+    &lt;!-- Span 6 columns: -->
+    &lt;div class="col col_6 test_border">.col.col_6&lt;/div>
+
+    &lt;!-- Span 6 columns: -->
+    &lt;div class="col col_6 test_border">.col.col_6&lt;/div>
+
+&lt;/div></code></pre>
+
+    <hr>
+
+    <a id="widths"></a>
+
+    <h3>Widths:</h3>
+
+    <p>Widths are assigned by appending the amount of columns that you would like to span to the column div class. <em>NOTE: you must still include the base <code>.col</code> class as seen below!</em></p>
+
+    <div class="clearfix test_border">
+      <div class="col col_1 test_border">.col_1</div>
+      <div class="col col_11 test_border">.col_11</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_2 test_border">.col_2</div>
+      <div class="col col_10 test_border">.col_10</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_3 test_border">.col_3</div>
+      <div class="col col_9 test_border">.col_9</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_4 test_border">.col_4</div>
+      <div class="col col_8 test_border">.col_8</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_5 test_border">.col_5</div>
+      <div class="col col_7 test_border">.col_7</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_6 test_border">.col_6</div>
+      <div class="col col_6 test_border">.col_6</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_7 test_border">.col_7</div>
+      <div class="col col_5 test_border">.col_5</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_8 test_border">.col_8</div>
+      <div class="col col_4 test_border">.col_4</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_9 test_border">.col_9</div>
+      <div class="col col_3 test_border">.col_3</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_10 test_border">.col_10</div>
+      <div class="col col_2 test_border">.col_2</div>
+    </div>
+    <div class="clearfix test_border">
+      <div class="col col_11 test_border">.col_11</div>
+      <div class="col col_1 test_border">.col_1</div>
+    </div>
+
+    <br>
+
+    <pre><code class="language-markup">&lt;div class="clearfix test_border">
+  &lt;div class="col col_1 test_border">.col_1&lt;/div>
+  &lt;div class="col col_11 test_border">.col_11&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_2 test_border">.col_2&lt;/div>
+  &lt;div class="col col_10 test_border">.col_10&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_3 test_border">.col_3&lt;/div>
+  &lt;div class="col col_9 test_border">.col_9&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_4 test_border">.col_4&lt;/div>
+  &lt;div class="col col_8 test_border">.col_8&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_5 test_border">.col_5&lt;/div>
+  &lt;div class="col col_7 test_border">.col_7&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_6 test_border">.col_6&lt;/div>
+  &lt;div class="col col_6 test_border">.col_6&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_7 test_border">.col_7&lt;/div>
+  &lt;div class="col col_5 test_border">.col_5&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_8 test_border">.col_8&lt;/div>
+  &lt;div class="col col_4 test_border">.col_4&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_9 test_border">.col_9&lt;/div>
+  &lt;div class="col col_3 test_border">.col_3&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_10 test_border">.col_10&lt;/div>
+  &lt;div class="col col_2 test_border">.col_2&lt;/div>
+&lt;/div>
+&lt;div class="clearfix test_border">
+  &lt;div class="col col_11 test_border">.col_11&lt;/div>
+  &lt;div class="col col_1 test_border">.col_1&lt;/div>
+&lt;/div></code></pre>
+
+    <hr>
+
+    <a id="responsive"></a>
+
+    <h3>Responsive Grids:</h3>
+
+    <p>To get your grids to have different layouts at different configurations add the sized column classes like in the following examples:</p>
+
+    <div class="clearfix test_border">
+      <div class="col col_6 col_lg_4 col_sm_12 test_border">.col.col_6.col_lg_4.col_sm_12</div>
+      <div class="col col_6 col_lg_8 col_sm_12 test_border">.col.col_6.col_lg_8.col_sm_12</div>
+    </div>
+
+    <br>
+
+    <p><img class="size-full" src="{{ file.frontMatter.base_url }}{{ img_base_url }}/animations/grid_respond.gif" alt="Responsive Grid in Action"></p>
+
+    <pre><code class="language-markup">&lt;div class="clearfix test_border">
+  &lt;div class="col col_6 col_lg_4 col_sm_12 test_border">.col.col_6.col_lg_4.col_sm_12&lt;/div>
+  &lt;div class="col col_6 col_lg_8 col_sm_12 test_border">.col.col_6.col_lg_8.col_sm_12&lt;/div>
+&lt;/div></code></pre>
+
+    <hr>
+
+    <a id="gutters"></a>
+
+    <h3>Gutters:</h3>
+
+    <p class="alert info">Gutters are dependent on the <strong>whitespace</strong> SASS module!</p>
+
+    <p>To get consistent gutters between columns Holy Grail utilizes a negative-margin technique to eliminate excess borders on the left and the right of the row. When not using a <code>.grid</code> container these negative margins are visible as you can see in the following example:</p>
+
+    <div class="clearfix mar_x_neg_1 test_border">
+      <div class="col col_6 pad_x_1"><div class="test_border">.col.col_6.pad_x_1</div></div>
+      <div class="col col_6 pad_x_1"><div class="test_border">.col.col_6.pad_x_1</div></div>
+    </div>
+
+    <br>
+
+    <p>Increased gutter sizing is also available by increasing the x-axis padding and negative margins:</p>
+
+    <div class="clearfix mar_x_neg_2 test_border">
+      <div class="col col_6 pad_x_2"><div class="test_border">.col.col_6.pad_x_2</div></div>
+      <div class="col col_6 pad_x_2"><div class="test_border">.col.col_6.pad_x_2</div></div>
+    </div>
+
+    <br>
+
+    <pre><code class="language-markup">&lt;!-- Normal gutter -->
+&lt;div class="clearfix mar_x_neg_1 test_border">
+  &lt;div class="col col_6 pad_x_1">&lt;div class="test_border">.col.col_6.pad_x_1&lt;/div>&lt;/div>
+  &lt;div class="col col_6 pad_x_1">&lt;div class="test_border">.col.col_6.pad_x_1&lt;/div>&lt;/div>
+&lt;/div>
+
+&lt;!-- 2x gutter -->
+&lt;div class="clearfix mar_x_neg_2 test_border">
+  &lt;div class="col col_6 pad_x_2">&lt;div class="test_border">.col.col_6.pad_x_1&lt;/div>&lt;/div>
+  &lt;div class="col col_6 pad_x_2">&lt;div class="test_border">.col.col_6.pad_x_1&lt;/div>&lt;/div>
+&lt;/div></code></pre>
+
+    <br>
+
+    <p>Setting up your own gutter class is trivial. Have a look at the whitespace module or the following code to get an idea of what's going on:</p>
+
+    <pre><code class="language-scss">// Negative margin on x-axis
+.mar_x_neg_custom {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+// Padding on x-axis
+.pad_x_custom {
+  padding-left:  25px;
+  padding-right: 25px;
+}</code></pre>
+
+    <hr>
+
+    <a id="push"></a>
+
+    <h3>Push (offset) Columns:</h3>
+
+    <p>Holy Grail's grid system supports pushing columns to support more complex grid layouts. Say hello to "Grid Dude":</p>
+
+    <div class="grid" id="grid_dude">
+      <div class="clearfix">
+        <div class="col col_4 col_push_4"><div class="well"></div></div>
+      </div>
+      <div class="clearfix">
+        <div class="col col_2 col_push_3"><div class="well"></div></div>
+        <div class="col col_2 col_push_2"><div class="well"></div></div>
+      </div>
+      <div class="clearfix">
+        <div class="col col_8 col_push_2"><div class="well"></div></div>
+      </div>
+      <div class="clearfix">
+        <div class="col col_1 col_push_2"><div class="well"></div></div>
+        <div class="col col_4 col_push_1"><div class="well"></div></div>
+        <div class="col col_1 col_push_1"><div class="well"></div></div>
+      </div>
+      <div class="clearfix">
+        <div class="col col_1 col_push_2"><div class="well"></div></div>
+        <div class="col col_4 col_push_1"><div class="well"></div></div>
+        <div class="col col_1 col_push_1"><div class="well"></div></div>
+      </div>
+      <div class="clearfix">
+        <div class="col col_1 col_push_4"><div class="well"></div></div>
+        <div class="col col_1 col_push_2"><div class="well"></div></div>
+      </div>
+      <div class="clearfix">
+        <div class="col col_1 col_push_4"><div class="well"></div></div>
+        <div class="col col_1 col_push_2"><div class="well"></div></div>
+      </div>
+      <div class="clearfix">
+        <div class="col col_2 col_push_3"><div class="well"></div></div>
+        <div class="col col_2 col_push_2"><div class="well"></div></div>
+      </div>
+    </div>
+
+    <br>
+
+    <pre><code class="language-markup">&lt;div class="grid" id="grid_dude">
+  &lt;div class="clearfix">
+    &lt;div class="col col_4 col_push_4">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+  &lt;div class="clearfix">
+    &lt;div class="col col_2 col_push_3">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_2 col_push_2">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+  &lt;div class="clearfix">
+    &lt;div class="col col_8 col_push_2">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+  &lt;div class="clearfix">
+    &lt;div class="col col_1 col_push_2">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_4 col_push_1">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_1 col_push_1">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+  &lt;div class="clearfix">
+    &lt;div class="col col_1 col_push_2">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_4 col_push_1">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_1 col_push_1">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+  &lt;div class="clearfix">
+    &lt;div class="col col_1 col_push_4">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_1 col_push_2">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+  &lt;div class="clearfix">
+    &lt;div class="col col_1 col_push_4">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_1 col_push_2">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+  &lt;div class="clearfix">
+    &lt;div class="col col_2 col_push_3">&lt;div class="well">&lt;/div>&lt;/div>
+    &lt;div class="col col_2 col_push_2">&lt;div class="well">&lt;/div>&lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+
+    <hr>
+
+    <a id="centering"></a>
+
+    <h3>Centering Columns:</h3>
+
+    <p class="alert info">Centering columns is dependent on the <strong>whitespace</strong> SASS module!</p>
+
+    <p>Just add the <code>.mar_x_auto</code> class to clear any floats and apply a simple <code>margin-left/right: auto</code></p>
+
+    <div class="clearfix test_border">
+      <div class="col col_6 mar_x_auto test_border">.col .col_6 .mar_x_auto</div>
+    </div>
+
+    <br>
+
+    <pre><code class="language-markup">&lt;div class="clearfix test_border">
+  &lt;div class="col col_6 mar_x_auto test_border">.col .col_6 .mar_x_auto&lt;/div>
+&lt;/div></code></pre>
+
+    <hr>
+
+    <a id="nesting"></a>
+
+    <h3>Nesting:</h3>
+
+    <p>You can nest entire grids within columns to create nested grids:</p>
+
+    <div class="clearfix">
+
+      <div class="col col_8">
+        <div class="well">
+
+          <p>.col.col_8 <em>(not nested)</em></p>
+
+          <div class="clearfix">
+            <div class="col col_6"><div style="margin-bottom: 0;" class="well">.col.col_6 (nested)</div></div>
+            <div class="col col_6"><div style="margin-bottom: 0;" class="well">.col.col_6 (nested)</div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col col_4">
+        <div class="well">.col.col_4 <em>(not nested)</em></div>
+      </div>
+
+    </div>
+
+    <pre><code class="language-markup">&lt;div class="clearfix">
+
+  &lt;div class="col col_8">
+    &lt;div class="well">
+
+      &lt;p>.col.col_8 &lt;em>(not nested)&lt;/em>&lt;/p>
+
+      &lt;div class="clearfix">
+        &lt;div class="col col_6">&lt;div class="well">.col.col_6 (nested)&lt;/div>&lt;/div>
+        &lt;div class="col col_6">&lt;div class="well">.col.col_6 (nested)&lt;/div>&lt;/div>
+      &lt;/div>
+
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="col col_4">
+    &lt;div class="well">.col.col_4 &lt;em>(not nested)&lt;/em>&lt;/div>
+  &lt;/div>
+
+&lt;/div></code></pre>
+
+    <hr>
+
+    <a id="reversed"></a>
+
+    <h3>Reversed Columns:</h3>
+
+    <p>Reversing the column order is easy (maybe you want to modify the order that content is marked-up):</p>
+
+    <div class="clearfix">
+      <div class="col col_6 col_right test_border">.col.col_6 (right)</div>
+      <div class="col col_6 test_border">.col.col_6</div>
+    </div>
+
+    <br>
+
+    <pre><code class="language-markup">&lt;div class="clearfix">
+  &lt;div class="col col_6 col_right">.col.col_6 (right)&lt;/div>
+  &lt;div class="col col_6">.col.col_6&lt;/div>
+&lt;/div></code></pre>
+
+
+  {{/content}}
+
+{{/extend}}

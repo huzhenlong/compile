@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/part/_fixgroupTable.css">
+<div ng-controller="smartGroup">
+    <div class="ibox">
+        <div class="ibox-title">
+            <h5>{[{importGroupList}]}</h5>
+
+            <div class="ibox-tools">
+                <a href="javascript:void(0);" onclick="fnClicKShow();" title="{[{addGroup}]}">
+                    <i class="fa fa-plus-square-o"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table class="table table-striped table-bordered table-hover" id="list_table"></table>
+        </div>
+    </div>
+
+    <div class="modal" id="myFixgroup" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">{[{newImportGroup}]}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="clearfix">
+                        <form name="lead" id="fixGroupForm" enctype="multipart/form-data" onsubmit="return false;">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>{[{name}]}</label>
+                                    <input type="text" name="name" class="form-control resetCon"
+                                           placeholder="{[{importName}]}"/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox m-r-xs">
+                                        <input type="checkbox" id="checkBox" name="publicFlag" value="1" checked hidden>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button type="button" class="btn btn-white pull-right" data-dismiss="modal"
+                                    style="margin-left: 10px;">{[{close}]}
+                            </button>
+                            <button type="submit" class="btn btn-primary pull-right" id="addFixgroup">{[{add}]}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

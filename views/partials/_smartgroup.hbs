@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/part/_smartgroup.css">
+
+<div id="smartGroupCondition" class="col-lg-12 clear" ng-app="sg" ng-controller="smartGroup" ng-cloak>
+    <div class="clear" style="height: 36px;">
+        <nav class="switchBox switch">
+            <span id="sgcBtn" title="{[{sgConSwitch}]}">
+            <input type="checkbox" class="js-switch js-check-click" checked="" data-switchery="true" name="toggle"
+                   style="display: none;">
+                <label for="toggle"><i></i></label>
+    <span></span>
+            </span>
+        </nav>
+        <p id="timelineBtn" style="float: right;display: inline-block;">
+            <button id="btn-sm-refresh" class="btn btn-info" title="{[{refresh}]}"><i class="fa fa-refresh"></i></button>
+            <button id="btn-sm-save" class="btn btn-info" title="{[{save}]}"><i class="fa fa-save"></i></button>
+            <button id="btn-sm-del" class="btn btn-info" title="{[{del}]}"><i class="fa fa-trash"></i></button>
+            <button id="btn-sm-clear" class="btn btn-info" title="{[{clear}]}"><i class="fa fa-eraser"></i></button>
+        </p>
+    </div>
+    <div class="ibox float-e-margins" id="sgWrap" style="margin-bottom: 0">
+        <div id="smartgroup-filter" class="ibox-content" style="padding: 5px;margin-bottom: 5px"></div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight" style="padding: 10px 15px 40px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins" style="margin-bottom: 0">
+                <div class="ibox-content" id="ibox-content">
+                    <div id="vertical-timeline" class="vertical-container dark-timeline center-orientation"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/angularJs/_smartgroup.js"></script>

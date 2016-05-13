@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> header}}
+
+        <!-- build:css /css/smartGroupModal.css -->
+
+    <link rel="stylesheet" href="/css/plugins/smartGroupModal/smartGroupModal.css">
+        <!-- endbuild -->
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="navMenuBox"></div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div id="levelSetting" class="active">
+
+            {{> _parameterSetting}}
+        </div>
+
+
+        {{> footer}}
+    </div>
+</div>
+<!-- build:js /js/parameterSetting.js -->
+
+<script src="/js/plugins/navMenu/navMenu.js"></script>
+
+<script src="/js/smartgroup/smartgroup.filter.js"></script>
+<script src="/js/plugins/smartGroupModal/smartGroupModal.js"></script>
+<script src="/js/plugins/customTab/customTab.js"></script>
+<script src="/js/parameterSetting/levelSetting.js"></script>
+<!--endbuild-->
+
+</body>
+</html>

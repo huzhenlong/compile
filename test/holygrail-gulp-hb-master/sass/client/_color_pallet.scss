@@ -1,0 +1,75 @@
+//
+//  Color pallet builder
+//
+//  REQUIRES:
+//  - Color Palette
+//
+
+// scss-lint:disable IdSelector
+
+// Builds a color pallet with all the correct samples
+@mixin color_pallet(
+    $class,
+    $base,
+    $border,
+    $text,
+    $notify_background,
+    $notify_border,
+    $notify_text
+  ) {
+
+  #{$class} {
+
+    .base {
+      background: $base;
+      color: $text;
+      font-weight: bold;
+    }
+
+    .background { background: $notify_background; }
+    .border { background: $notify_border; }
+    .txt { background: $notify_text; }
+  }
+}
+
+// Color Pallet Wrapper
+#color_pallet {
+
+  // Color Pallets
+  @include color_pallet( "._base", $fh_color_base, $fh_color_base_bdr, $fh_color_base_txt, $fh_color_base_notify_bg, $fh_color_base_notify_bdr, $fh_color_base_notify_txt );
+  @include color_pallet( ".info", $fh_color_info, $fh_color_info_bdr, $fh_color_info_txt, $fh_color_info_notify_bg, $fh_color_info_notify_bdr, $fh_color_info_notify_txt );
+  @include color_pallet( ".success", $fh_color_success, $fh_color_success_bdr, $fh_color_success_txt, $fh_color_success_notify_bg, $fh_color_success_notify_bdr, $fh_color_success_notify_txt );
+  @include color_pallet( ".warn", $fh_color_warn, $fh_color_warn_bdr, $fh_color_warn_txt, $fh_color_warn_notify_bg, $fh_color_warn_notify_bdr, $fh_color_warn_notify_txt );
+  @include color_pallet( ".danger", $fh_color_danger, $fh_color_danger_bdr, $fh_color_danger_txt, $fh_color_danger_notify_bg, $fh_color_danger_notify_bdr, $fh_color_danger_notify_txt );
+  @include color_pallet( ".default", $fh_color_default, $fh_color_default_bdr, $fh_color_default_txt, $fh_color_default_notify_bg, $fh_color_default_notify_bdr, $fh_color_default_notify_txt );
+  @include color_pallet( ".disabled", $fh_color_disabled, $fh_color_disabled_bdr, $fh_color_disabled_txt, $fh_color_disabled_notify_bg, $fh_color_disabled_notify_bdr, $fh_color_disabled_notify_txt );
+
+  // Color Family
+  .family {
+    padding: 20px 0;
+    border-bottom: 1px #ddd dashed;
+
+    &:last-child { border-bottom: 0; }
+  }
+
+  // Display strip as table
+  .strip {
+    @extend %fh_type_bottom_margin_extension;
+
+    display: table;
+    width: 100%;
+  }
+
+  .base,
+  .background,
+  .border,
+  .txt {
+    display: table-cell;
+    height: 70px;
+    padding: 20px;
+    vertical-align: middle;
+    width: 25%;
+  }
+}
+
+// scss-lint:enable IdSelector

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- build:css /css/_smsTem.css -->
+    <link rel="stylesheet" href="/css/smsPersonality.css">
+    <!--endbuild-->
+    {{> header}}
+
+</head>
+<body ng-app="sms" ng-controller="smsPer" ng-cloak>
+<div id="wrapper">
+    {{> menu}}
+
+    <div id="page-wrapper" class="gray-bg">
+        {{> top}}
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{> _smsTemplate}}
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </div>
+</div>
+{{> loading}}
+
+{{> _smsPersonalityModal}}
+
+<!-- build:js /js/smsTemplateTable.js -->
+<script src="/js/tableList/smsTemplateTable.js"></script>
+<script src="/js/cocatn/personalizeDao.js"></script>
+<script src="/js/cocatn/smartgroupDao.js"></script>
+<script src="/js/cocatn/platformDao.js"></script>
+<script src="/js/plugins/individuationCondition/individuationCondition.js"></script>
+<script src="/js/smsPersonality/smsPersonality.js"></script>
+<!--endbuild-->
+</body>
+</html>

@@ -1,0 +1,197 @@
+---
+title: Holy Grail Toolkit
+disable_page_title: true
+template_code_class: one_full
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url:
+active_uri: holygrail.html
+sidebar_right_partials:
+- components/sidebar/home
+body_class: hg_home
+---
+
+{{#extend "layouts/holygrail"}}
+
+  {{#content "pre_main"}}
+    <header id="graphic_hero">
+      <img src="{{ file.frontMatter.base_url }}{{ img_base_url }}/intro_image.png" title="Introducing - Holy Grail" alt="Introducing - Holy Grail" class="aligncenter" />
+      <h1>The Holy Grail Toolkit</h1>
+    </header>
+  {{/content}}
+
+  {{#content "content"}}
+
+    <div class="alert info text_center">
+      <p>Holy Grail is currently in <strong>pre-alpha + experimental development</strong>. Proceed with caution!</p>
+    </div>
+
+    <p>Holy Grail is a front-end development toolkit targeted at being lightweight easy to use. It is built on <a href="http://bourbon.io/" target="_blank">Bourbon</a> and is heavily influenced by <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3</a> and <a href="http://bitters.bourbon.io/" target="_blank">Bitters</a>. Holy Grail also includes tools such-as task-runners for asset compilation, a static site generator, and popular CMS boilerplate themes.</p>
+
+    <div class="grid">
+
+      <div class="mar_x_neg_1 clearfix">
+
+        <div class="col col_4 col_lg_12 pad_x_1">
+
+          <div class="well mar_clear">
+            <h5>Holy Grail</h5>
+            <p>The core of it all - the SASS and JavaScript that are the base "tools" of this toolkit.</p>
+            <div class="text_center">
+              <a href="#" class="btn info sm"><i class="fa fa-github"></i>&nbsp; Holy Grail on GitHub</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col col_4 col_lg_12 pad_x_1">
+          <div class="well mar_clear">
+            <h5>Generator</h5>
+            <p>Static site generator built on <a href="http://gulpjs.com/" target="_blank">Gulp</a>, <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a>, and <a href="https://www.npmjs.com/package/gulp-hb" target="_blank">gulp-hb</a> for static website generation.</p>
+            <div class="text_center">
+              <a href="#" class="btn info sm"><i class="fa fa-github"></i>&nbsp; Generator on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col_4 col_lg_12 pad_x_1">
+          <div class="well mar_clear">
+            <h5>Docs</h5>
+            <p>Both Holy Grail and the Generator working together to compile these docs.</p>
+            <div class="text_center">
+              <a href="#" class="btn info sm"><i class="fa fa-github"></i>&nbsp; Docs on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    <h2>Whats included in Holy Grail?</h2>
+
+    <div class="grid">
+
+      <div class="mar_x_neg_1 clearfix">
+        <div class="col col_6 col_lg_12 pad_x_1">
+
+          <h4>Typography:</h4>
+
+          <ul>
+            <li>All typographic elements are fitted to a <a href="http://webdesign.tutsplus.com/articles/improving-layout-with-vertical-rhythm--webdesign-14070" target="_blank">vertical rhythm</a></li>
+            <li>The <code>font-size</code>, <code>margin</code>, and <code>padding</code> of all content elements are proportionally set to a <a href="http://type-scale.com/" target="_blank">modular scale</a></li>
+            <li>Optional responsive typography to get the most out of smaller viewports</li>
+            <li>...And nothing else. We set a sane baseline and GTFO</li>
+          </ul>
+
+        </div>
+
+        <div class="col col_6 col_lg_12 pad_x_1">
+
+          <h4>Opt-in Responsive Layouts:</h4>
+
+          <ul>
+            <li><a href="{{ file.frontMatter.relative_nav_url }}layouts/two_left_2.html">Configurable fluid or fixed width content support with support for pixel and rem based units</a></li>
+            <li>Optional <a href="{{ file.frontMatter.relative_nav_url }}features/sidebars_offcanvas.html">off-canvas fly-out sidebars</a></li>
+            <li>1 content + <strong>1 or 2</strong> sidebars justified left <strong>or</strong> right</li>
+            <li>1 content + 2 sidebars justified left <strong>and</strong> right</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <div class="mar_x_neg_1 clearfix">
+
+        <div class="col col_6 col_lg_12 pad_x_1">
+
+          <h4>Opt-in Modules:</h4>
+
+          <p>As time progresses we will be developing additional common front-end modules. We've already got a great head-start:</p>
+
+          <ul>
+            <li><a href="{{ file.frontMatter.relative_nav_url }}features/forms.html">Forms &amp; Buttons</a></li>
+            <li><a href="{{ file.frontMatter.relative_nav_url }}features/grid.html">Grid</a></li>
+            <li><a href="{{ file.frontMatter.relative_nav_url }}features/navbar.html">Navbar</a></li>
+            <li><a href="{{ file.frontMatter.relative_nav_url }}features/color.html">Color Palette</a></li>
+            <li><a href="{{ file.frontMatter.relative_nav_url }}features/wells.html">Wells &amp; Alerts</a></li>
+            <li><a href="{{ file.frontMatter.relative_nav_url }}features/tables_extended.html">Tables</a></li>
+          </ul>
+
+        </div>
+
+        <div class="col col_6 col_lg_12 pad_x_1">
+
+          <h4>A Full Toolkit:</h4>
+
+          <p>Pre-alpha versions of Holy Grail already sit side-by-side with some pretty cool pieces of software such-as:</p>
+
+          <ul class="mar_clear_b">
+            <li>Handlebars (as a Node.js-driven static site generator)</li>
+            <li>Bootstrap 3 (stripped-down to it's layout and typographic libraries)</li>
+            <li>WordPress/WooCommerce (as a starter-theme)</li>
+            <li>Large enterprise applications to micro-apps &amp; websites</li>
+            <li>Multiple proprietary publishing platforms</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h3>Special Thanks:</h3>
+
+    <div class="grid">
+
+      <div class="mar_x_neg_1 clearfix">
+
+        <div class="col col_3 col_lg_12 pad_x_1">
+          <ul>
+            <li><a href="http://bourbon.io/" target="_blank">Bourbon (and friends)</a></li>
+            <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+            <li><a href="https://github.com/GumbyFramework/Gumby" target="_blank">Gumby</a></li>
+            <li><a href="http://bootflat.github.io/index.html" target="_blank">Bootflat</a></li>
+            <li><a href="http://www.basscss.com/" target="_blank">BASSCSS</a></li>
+            <li><a href="https://github.com/Dogfalo/materialize" target="_blank">Materialize</a></li>
+          </ul>
+        </div>
+
+        <div class="col col_3 col_lg_12 pad_x_1">
+          <ul>
+            <li><a href="http://getuikit.com/index.html" target="_blank">uikit</a></li>
+            <li><a href="http://spacebase.space150.com/" target="_blank">SpaceBase</a></li>
+            <li><a href="http://purecss.io/" target="_blank">Pure.css</a></li>
+            <li><a href="http://getskeleton.com/" target="_blank">Skeleton</a></li>
+            <li><a href="http://getskel.com/" target="_blank">Skel</a></li>
+          </ul>
+        </div>
+
+        <div class="col col_3 col_lg_12 pad_x_1">
+          <ul>
+            <li><a href="http://foundation.zurb.com/" target="_blank">Foundation</a></li>
+            <li><a href="http://gulpjs.com/" target="_blank">Gulp</a></li>
+            <li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
+            <li><a href="http://bower.io/" target="_blank">Bower</a></li>
+            <li><a href="https://www.npmjs.com/package/gulp-hb" target="_blank">gulp-hb</a></li>
+          </ul>
+        </div>
+
+        <div class="col col_3 col_lg_12 pad_x_1">
+          <ul>
+            <li><a href="http://prismjs.com/index.html" target="_blank">PrismJS</a></li>
+            <li><a href="http://alistapart.com/" target="_blank">A List Apart</a></li>
+            <li><a href="http://html5up.net/" target="_blank">HTML5 UP</a></li>
+            <li><a href="http://www.amazon.com/exec/obidos/ASIN/0321509021/ref=nosim/simplebits-20" target="_blank">Bulletproof Web Design</a></li>
+            <li><a href="https://twitter.com/jeffrey_way" target="_blank">Jeffrey Way</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  {{/content}}
+
+{{/extend}}

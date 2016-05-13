@@ -1,0 +1,124 @@
+---
+title: Three Wrapped 2
+template_code_class: three_wrapped_2
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: layouts/three_wrapped_2.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Layouts - Three Wrapped 2
+sidebar_left_partials:
+- components/sidebar/layouts
+sidebar_right_partials:
+- components/sidebar/layout_nav
+page_js_assets:
+- js/layout_switcher.js
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <a id="styleguide"></a>
+        {{> components/styleguide/content_short }}
+
+        <hr>
+
+        <a id="hbs"></a>
+
+        <h3>Handlebars:</h3>
+
+        <pre><code class="language-handlebars">---
+title: Three Wrapped 2
+template_code_class: three_wrapped_2
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: holygrail/three_wrapped_2.html
+breadcrumbs:
+- Holy Grail|../holygrail.html
+- Layouts - Three Wrapped 2
+sidebar_left_partials:
+- components/sidebar/layouts
+sidebar_right_partials:
+- components/sidebar/layout_nav
+---
+\{{#extend "layouts/holygrail"}}
+    \{{#content "content" }}
+
+        \{{> components/styleguide/content }}
+
+    \{{/content}}
+\{{/extend}}</code></pre>
+
+        <hr>
+
+        <a id="html"></a>
+
+        <h3>HTML:</h3>
+
+        <pre><code class="language-markup">&lt;!-- Body Wrapper -->
+&lt;div class="body_wrap">
+
+    &lt;!-- Main Wrapper -->
+    &lt;div id="main" class="clearfix three_wrapped_2">
+
+        &lt;!-- Main Gutter -->
+        &lt;div class="gutter_main">
+
+            &lt;!-- Content -->
+            &lt;div id="content">
+
+                &lt;!-- Content Gutter -->
+                &lt;div class="gutter_content">
+
+                    &lt;!-- Content -->
+
+                &lt;/div> &lt;!-- /Content Gutter -->
+            &lt;/div> &lt;!-- /Content -->
+
+            &lt;!-- Asides Wrapper -->
+            &lt;div id="asides_wrap">
+
+                &lt;!-- Sidebar Left -->
+                &lt;aside id="sidebar_left">
+
+                    &lt;!-- Sidebar Gutter -->
+                    &lt;div class="gutter_sidebar">
+
+                        &lt;!-- Sidebar Segment -->
+                        &lt;div class="segment">
+
+                            &lt;!-- Sidebar Left Content-->
+
+                        &lt;/div>&lt;!-- /Sidebar Segment -->
+                    &lt;/div>&lt;!-- /Sidebar Gutter -->
+                &lt;/aside>&lt;!-- /Sidebar Left -->
+
+                &lt;!-- Sidebar Right -->
+                &lt;aside id="sidebar_right">
+
+                    &lt;!-- Sidebar Gutter -->
+                    &lt;div class="gutter_sidebar">
+
+                        &lt;!-- Sidebar Segment -->
+                        &lt;div class="segment">
+
+                            &lt;!-- Sidebar Right Content-->
+
+                        &lt;/div>&lt;!-- /Sidebar Segment -->
+                    &lt;/div>&lt;!-- /Sidebar Gutter -->
+                &lt;/aside>&lt;!-- /Sidebar Right -->
+
+            &lt;/div> &lt;!-- /Asides Wrapper -->
+
+        &lt;/div> &lt;!-- /Main Gutter -->
+    &lt;/div> &lt;!-- /Main Wrapper -->
+
+&lt;/div> &lt;!-- /Body Wrapper --></code></pre>
+
+    {{/content}}
+
+{{/extend}}

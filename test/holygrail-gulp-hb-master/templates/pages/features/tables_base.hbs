@@ -1,0 +1,67 @@
+---
+title: Base Tables
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/tables_base.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Features - Base Tables
+sidebar_right_partials:
+- components/sidebar/sitevars
+---
+
+{{#extend "layouts/holygrail"}}
+
+        {{#content "content" }}
+
+            <h3>Base Table (no classes):</h3>
+
+            <table>
+                <tr>
+                    <th>Entry Header 1</th>
+                    <th>Entry Header 2</th>
+                    <th>Entry Header 3</th>
+                    <th>Entry Header 4</th>
+                </tr>
+                <tr>
+                    <td>Entry First Line 1</td>
+                    <td>Entry First Line 2</td>
+                    <td>Entry First Line 3</td>
+                    <td>Entry First Line 4</td>
+                </tr>
+                <tr>
+                    <td>Entry Line 1</td>
+                    <td>Entry Line 2</td>
+                    <td>Entry Line 3</td>
+                    <td>Entry Line 4</td>
+                </tr>
+                <tr>
+                    <td>Entry Last Line 1</td>
+                    <td>Entry Last Line 2</td>
+                    <td>Entry Last Line 3</td>
+                    <td>Entry Last Line 4</td>
+                </tr>
+            </table>
+
+            <pre><code class="language-markup">&lt;table>
+    &lt;tr>
+        &lt;th>Entry Header 1&lt;/th>
+        &lt;th>Entry Header 2&lt;/th>
+        &lt;th>Entry Header 3&lt;/th>
+        &lt;th>Entry Header 4&lt;/th>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>Entry First Line 1&lt;/td>
+        &lt;td>Entry First Line 2&lt;/td>
+        &lt;td>Entry First Line 3&lt;/td>
+        &lt;td>Entry First Line 4&lt;/td>
+    &lt;/tr>
+    &lt;-- Continued -->
+&lt;/table></code></pre>
+
+        {{/content}}
+
+{{/extend}}

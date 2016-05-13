@@ -1,0 +1,74 @@
+
+// scss-lint:disable IdSelector, SelectorDepth, NestingDepth
+
+#main_nav {
+
+  background: #000;
+  border-bottom: #444 1px solid;
+
+  a {
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  // Navigation divders
+  .divider_before { border-top: #444 1px solid; }
+  .divider_after { border-bottom: #444 1px solid; }
+
+  // First-level links (navbar)
+  .body > ul > li {
+
+    text-transform: uppercase;
+    border-left: #444 1px solid;
+
+    &.active { background: #444; }
+
+    // Add a right border to last navigation element
+    &:last-child { border-right: #444 1px solid; }
+
+    ul {
+
+      background: #444;
+      border: #444 1px solid;
+
+      li { text-transform: initial; }
+
+      a:hover { background: #000; }
+    }
+  }
+
+  @media screen and ( max-width: $fh_nav_resp_bk ) {
+
+    li:last-child { border-bottom: #444 1px solid; }
+
+    // First level
+    .body > ul {
+
+      background: #000;
+      
+      // Set the background color on individual list items
+      > li { border-bottom: #444 1px solid; }
+
+      // Add a top border between navbar and list
+      > li:first-child { border-top: #444 1px solid; }
+
+      ul > li:first-child { border-top: #444 1px solid; }
+    }
+  }
+}
+
+//
+//  Hamburger responsive navigation icon
+//
+
+#nav_hmbgr_btn {
+
+  background: #000;
+  border: 1px #444 solid;
+
+  // Spans are used for the three horizontal bars
+  span { background-color: #fff; }
+}
+
+// scss-lint:enable ImportantRule, SpaceAfterComma

@@ -1,0 +1,24 @@
+{
+  "name": "bower",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "HZL"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "dependencies": {
+    "react": "^15.0.1"
+  }
+}

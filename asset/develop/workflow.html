@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- build:css /css/_smartGroupModal.css -->
+    <link rel="stylesheet" href="/css/plugins/smartGroupModal/smartGroupModal.css">
+    <!--endbuild-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- build:css /css/main.css -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrapValidator.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+    
+    <link href="/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="/css/plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="/css/plugins/letterfx/jquery-letterfx.min.css" rel="stylesheet">
+    
+    
+    <link href="/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="/css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet">
+    
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="/css/workflow.css" rel="stylesheet">
+    <!-- endbuild -->
+    
+    
+    <!-- build:js /js/main.js -->
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/plugins/bootstrapValidator/bootstrapValidator.min.js"></script>
+    <script src="/js/plugins/jquery-ui/jquery.cookie.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/react/react.min.js"></script>
+    <script src="/js/react/react-dom.min.js"></script>
+    <script src="/js/react/browser.min.js"></script>
+    
+    <script src="/js/plugins/md5/md5.min.js"></script>
+    <script src="/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/js/plugins/select2/select2.full.min.js"></script>
+    <script src="/js/plugins/toastr/toastr.min.js"></script>
+    <script src="/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    
+    <script src="/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+    <script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="/js/plugins/letterfx/jquery-letterfx.min.js"></script>
+    
+    <script src="/js/inspinia.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/common.js"></script>
+    
+    <script src="/js/cocatn/workflowDao.js"></script>
+    <script src="/js/cocatn/smartgroupDao.js"></script>
+    <script src="/js/cocatn/platformDao.js"></script>
+    <script src="/js/cocatn/platDao.js"></script>
+    <script src="/js/cocatn/personalizeDao.js"></script>
+    
+    <script src="/lang/lang.js"></script>
+    <script src="/lang/selectLang.js"></script>
+    
+    <script src="/js/constants.js"></script>
+    
+    <script src="/js/plugins/navMenu/navMenuPlugin.js"></script>
+    
+    <script src="/js/plugins/modal/modal.form.js"></script>
+    
+    <script src="/js/job/sendEmail.js"></script>
+    <script src="/js/job/sendSms.js"></script>
+    
+    <script src="/js/smartgroup/smartgroupPlugin.js"></script>
+    <script src="/js/smartgroup/smartgroup.filter.js"></script>
+    
+    <script src="/js/plugins/loading/prefixfree.min.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+<div id="wrapper">
+    <div id="navMenuBox"></div>
+    <!-- build:js /js/navMenu.js -->
+    
+    <script src="/js/plugins/navMenu/navMenu.js"></script>
+    <script src="/js/angularJs/navMenu.js"></script>
+    <!--endbuild-->
+    
+    
+    
+    <div id="page-wrapper" class="gray-bg">
+        <link rel="stylesheet" href="/css/part/top.css">
+        
+        <div >
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
+                                class="fa fa-sliders"></i></a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <select name="lang" id="lang" style="border: 0;background: inherit;    font-size: 12px;">
+                                    <option value="">中文</option>
+                                    <option value="en">英文</option>
+                                </select>
+                        </li>
+                        <li id="userInfo">
+                            <a href="javascript:void(0);" id="userName"><i class="fa fa-user"></i></a>
+        
+                            <div id="userInfoContent">
+                                <p><span id="loginTime"></span>：<br><span>2016/1/1</span></p>
+        
+                                <p><span id="memberScore"></span>：<br><span>99999</span></p>
+                            </div>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <span data-href="/parameterSetting.html" name="parameterSetting" id="setting">
+                                <div class="text-muted text-xs block">
+                                    <i class="fa fa-cogs"></i>
+                                </div>
+                            </span>
+        
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="content_breadcrumb" class="row wrapper border-bottom white-bg page-heading" style="padding: 5px 0;">
+                <div class="col-lg-10" style="margin-left: 5px;">
+                    <h3 id="page_title"></h3>
+                    <ol id="page_breadcrumb" class="breadcrumb">
+                        <li>
+                            <a href="/index.html" id="homePage"></a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        
+        <script src="/js/angularJs/top.js"></script>        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div id="canvasBtnGroup" ng-app="work" ng-controller="workFlow" ng-cloak>
+                        <button id="show" class="btn btn-info" title="{[{preview}]}"><i class="fa fa-binoculars"></i></button>
+                        <button id="save" class="btn btn-info" title="{[{save}]}"><i class="fa fa-save" title="{[{save}]}"></i></button>
+                        <button id="delete" class="btn btn-info" title="{[{del}]}"><i class="fa fa-trash"></i></button>
+                        <button id="clear" class="btn btn-info" title="{[{clear}]}"><i class="fa fa-eraser"></i></button>
+                        <button id="remove" class="btn btn-info" title="{[{finish}]}"><i class="fa fa-stop"></i></button>
+                        <button id="publish" class="btn btn-info" title="{[{flowCheck}]}"><i class="fa fa-check"></i></button>
+                        <button id="run" class="btn btn-info" title="{[{play}]}"><i class="fa fa-play"></i></button>
+                        <button id="stop" class="btn btn-info" title="{[{pause}]}"><i class="fa fa-pause"></i></button>
+                        <button id="allEnd" class="btn btn-info" title="{[{stop}]}"><i class="fa fa-power-off"></i></button>
+                        <button id="addWorkflow" class="btn btn-info" title="{[{addWorkFlow}]}"><i class="fa fa-plus"></i></button>
+                        <button id="workflowReport" class="btn btn-info" title="{[{roi}]}"><i class="fa fa-line-chart"></i></button>
+                    </div>
+                    <div id="canvases">
+                        <canvas width="600" height="200" style="cursor: auto;background-color: white;"></canvas>
+                    </div>
+                    
+                    <script src="/js/angularJs/_workflow.js"></script>                </div>
+            </div>
+        </div>
+        <div class="x-footer">
+            <div>
+                <strong>Copyright</strong> Xrewin Company &copy; 2015-2016
+            </div>
+        </div>    </div>
+</div>
+<!-- build:js /js/workflow.js -->
+<script src="/js/plugins/smartGroupModal/smartGroupModal.js"></script>
+<script src="/js/plugins/jcanvas/jcanvas.js"></script>
+<script src="/js/plugins/jcanvas/plugins/jcanvas-tooltip.js"></script>
+<script src="/js/plugins/modal/modal.workflow.js"></script>
+<script src="/js/workflow/workflow.jcanvas.js"></script>
+<script src="/js/workflow/workContent.js"></script>
+<!--endbuild-->
+</body>
+</html>

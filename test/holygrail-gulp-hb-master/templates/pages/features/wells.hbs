@@ -1,0 +1,60 @@
+---
+title: Wells & Alerts
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/wells.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Wells
+sidebar_right_partials:
+- components/sidebar/wells
+sidebar_affix: true
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <a id="wells"></a>
+
+        <h3>Testing Well - No Paragraph</h3>
+
+        <div class="well">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+        <pre><code class="language-markup">&lt;div class="well">Duis aute irure dolor....&lt;/div></code></pre>
+
+        <h3>Testing Well - Paragraphs</h3>
+
+        <div class="well">
+            {{> components/styleguide/lorem_p_2 }}
+        </div>
+
+        <h3>Testing Well - Content</h3>
+
+        <div class="well">
+            <img src="http://lorempixel.com/250/250/nature" class="alignright" title="Test Image" alt="Test Image" />
+            <h5>Testing Header</h5>
+            {{> components/styleguide/lorem_p_2 }}
+        </div>
+
+        <a id="alerts"></a>
+
+        <h3>Alerts</h3>
+
+        <div class="alert info">Testing colored well! Erm... I mean an alert!</div>
+        <div class="alert success">Testing colored well! Erm... I mean an alert!</div>
+        <div class="alert warn">Testing colored well! Erm... I mean an alert!</div>
+        <div class="alert danger">Testing colored well! Erm... I mean an alert!</div>
+        <div class="alert default">Testing colored well! Erm... I mean an alert!</div>
+
+        <pre><code class="language-markup">&lt;div class="alert info">Testing colored well! Erm... I mean an alert!&lt;/div>
+&lt;div class="alert success">Testing colored well! Erm... I mean an alert!&lt;/div>
+&lt;div class="alert warn">Testing colored well! Erm... I mean an alert!&lt;/div>
+&lt;div class="alert danger">Testing colored well! Erm... I mean an alert!&lt;/div>
+&lt;div class="alert default">Testing colored well! Erm... I mean an alert!&lt;/div></code></pre>
+
+    {{/content}}
+
+{{/extend}}

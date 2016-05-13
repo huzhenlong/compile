@@ -1,0 +1,26 @@
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+        background-color: #e6e6e6;
+        color: #fff;
+    }
+
+    #previewSearch {
+        color: #1AB394;
+    }
+
+    #tab-2 .panel-body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav.navbar.navbar-default {
+        background: #2f4050;
+        border-radius: 0 !important;
+    }
+
+    ul.nav.nav-tabs {
+        background: #2f4050;
+    }
+
+    body {
+        background: #fff !important;
+    }

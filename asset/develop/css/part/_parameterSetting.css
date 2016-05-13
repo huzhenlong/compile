@@ -1,0 +1,82 @@
+ .page_title {
+        display: inline-block;
+    }
+
+    .content_breadcrumb {
+        padding: 5px 0;
+    }
+
+    .btn-white, .btn-white:hover {
+        color: #19aa8d;
+        border: 1px solid #19aa8d;
+    }
+
+    .stat-percent.font-bold.text-danger {
+        width: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .label.label-default, .label.label-success {
+        cursor: pointer;
+    }
+
+    #saveName, #editorDesc {
+        display: none;
+    }
+
+    .ibox-content small {
+        cursor: pointer;
+        color: #1ab394;
+    }
+
+    #saveName input[type="text"] {
+        width: 140px;
+    }
+
+    .wrapper.wrapper-content {
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px 10px 0;
+    }
+
+    h3 {
+        letter-spacing: 4px;
+    }
+
+    .nav-tabs > li > a {
+        color: #A7B1C2;
+        font-weight: 600;
+        padding: 10px 20px;
+    }
+
+    .curSettingLv .ibox .ibox-title {
+        background: #1c84c6;
+    }
+
+    .curSettingLv .ibox .ibox-title h5 {
+        color: #fff;
+    }
+
+    .borderColor {
+        border: 1px solid #eee;
+    }
+
+    span.delNav {
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        top: 9px;
+    }
+
+    .badge-warning {
+        background-color: initial;
+        color: #ed5565;
+        font-size: 16px;
+        font-family: cursive;
+    }
+
+    #toast-rewin {
+        color: #19aa8d;
+    }

@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="/css/part/_index.css">
+
+<div ng-app="KPI" ng-controller="KPIContent">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="ibox float-e-margins" ng-cloak>
+                <div class="ibox-title">
+                    <span class="label label-white pull-right">{[{firstR}]}</span>
+                    <h5>{[{firstL}]}</h5>
+                </div>
+                <div class="ibox-content" ng-cloak>
+                    <h1 class="no-margins" title="{[{firstM}]}">{[{marketSuccessCount}]}</h1>
+                    <div class="stat-percent font-bold text-info">{[{marketScale}]}</div>
+                    <small title="{[{firstB}]}">{[{marketCount}]}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="ibox float-e-margins" ng-cloak>
+                <div class="ibox-title">
+                    <span class="label label-white pull-right">{[{secondR}]}</span>
+                    <h5>{[{secondL}]}</h5>
+                </div>
+                <div class="ibox-content" ng-cloak>
+                    <h1 class="no-margins" title="{[{secondM}]}">{[{marketIncome}]}</h1>
+                    <div class="stat-percent font-bold text-info">{[{marketIncomeScale}]}<i class="fa fa-level-up"></i>
+                    </div>
+                    <small title="{[{secondB}]}">{[{marketCost}]}</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="ibox float-e-margins" ng-cloak>
+                <div class="ibox-title">
+                    <span class="label label-white pull-right">{[{thirdR}]}</span>
+                    <h5>{[{thirdL}]}</h5>
+                </div>
+                <div class="ibox-content" ng-cloak>
+                    <h1 class="no-margins" title="{[{thirdM}]}">{[{noMarketMemberCount}]}</h1>
+                    <div class="stat-percent font-bold text-info">{[{memberScale}]}</div>
+                    <small title="{[{thirdB}]}">{[{memberCount}]}</small>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title" ng-cloak>
+                    <h5>{[{chart}]}</h5>
+                    <div class="pull-right">
+                        <div class="btn-group" id="toggleGapTime">
+                            <button type="button" class="btn btn-xs btn-white active"
+                                    ng-click="toggleGap($event,7)">{[{chart7}]}
+                            </button>
+                            <button type="button" class="btn btn-xs btn-white"
+                                    ng-click="toggleGap($event,1)">{[{chart1}]}
+                            </button>
+                            <button type="button" class="btn btn-xs btn-white"
+                                    ng-click="toggleGap($event,3)">{[{chart1}]}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div id="marketChart" style="height: 400px;"></div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div id="activity" style="height:400px;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox-content">
+                <table class="table table-striped table-bordered table-hover" id="marketTable"></table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+

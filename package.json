@@ -1,0 +1,107 @@
+{
+  "name": "compile",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "babel-core": "^6.7.6",
+    "babel-polyfill": "^6.8.0",
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "hbs": "~3.1.0",
+    "less-middleware": "1.0.x",
+    "morgan": "~1.6.1",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "h5bp-configs": {
+    "directories": {
+      "archive": "archive",
+      "dist": "dist",
+      "src": "src",
+      "test": "test"
+    }
+  },
+  "devDependencies": {
+    "apache-server-configs": "2.14.0",
+    "archiver": "^0.14.3",
+    "autoprefixer-loader": "^3.2.0",
+    "babel-cli": "^6.7.5",
+    "babel-core": "^6.8.0",
+    "babel-eslint": "^6.0.3",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-register": "^6.7.2",
+    "babel-runtime": "^6.6.1",
+    "babelify": "^7.2.0",
+    "css-loader": "^0.23.1",
+    "del": "^1.1.1",
+    "eslint": "^2.8.0",
+    "glob": "^5.0.5",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^1.2.1",
+    "gulp-compile-handlebars": "^0.4.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-csslint": "^0.1.5",
+    "gulp-data": "^1.2.1",
+    "gulp-es6-transpiler": "^1.0.1",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-hb": "^5.1.0",
+    "gulp-header": "^1.2.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.0.0",
+    "gulp-rev-append": "^0.1.6",
+    "gulp-rev-collector": "^1.0.3",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.0.8",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5",
+    "gulp-webpack": "^1.5.0",
+    "imagemin-pngquant": "^4.2.2",
+    "jquery": "^2.2.3",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.4",
+    "normalize.css": "3.0.3",
+    "react": "^15.0.1",
+    "run-sequence": "^1.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.0",
+    "yargs": "^4.6.0"
+  }
+}

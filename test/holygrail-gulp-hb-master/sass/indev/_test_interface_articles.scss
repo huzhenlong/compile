@@ -1,0 +1,94 @@
+// Articles browsing wrapper
+
+// scss-lint:disable IdSelector
+
+#articles {
+
+  border-bottom: 1px #ddd solid;
+  margin-bottom: $fh_hg_gutter;
+  padding-bottom: $fh_hg_gutter;
+
+  // Fix header link color
+  h2 > a {
+
+    @include transition( all 0.25s ease-in-out );
+
+    color: #3C3C3C;
+
+    &:hover {
+      color: $fh_color_base;
+      text-decoration: none;
+    }
+  }
+
+  // Extend clearfix because of floated featured image
+  .content { @extend %fh_clearfix_extension; }
+
+  // No bottom margin on additional article info
+  .additional {
+    margin-bottom: 0;
+
+    @media screen and ( max-width: $fh_type_respd_bkpt_2 ) {
+      text-align: center;
+    }
+  }
+
+  .read_more {
+    float: right;
+    margin: ( $fh_vr_ele_spacing / 4 ) 0 ( $fh_vr_ele_spacing / 4 ) $fh_vr_ele_spacing;
+
+    @media screen and ( max-width: $fh_type_respd_bkpt_2 ) {
+      display: block;
+      float: none;
+      margin: 0 auto $fh_vr_ele_spacing;
+      max-width: 85%;
+    }
+  }
+
+  // Featured image
+  // - NOTE: basically .alignright with a TINY top margin
+  // scss-lint:disable ImportantRule
+  .featured_img {
+
+    float: right;
+    margin: ( $fh_vr_ele_spacing / 4 ) 0 $fh_vr_ele_spacing $fh_vr_ele_spacing;
+    max-width: 40% !important;
+
+    img {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    // Responsive typographic spacing
+    @media screen and ( max-width: $fh_type_respd_bkpt_2 ) {
+      float: none;
+      margin: 0 auto $fh_vr_respd_ele_spacing;
+      max-width: 85% !important;
+    }
+  }
+  // scss-lint:enable ImportantRule
+}
+
+//
+//  Articles - Articles Navigation
+//  - Previous/Next/Back buttons below article
+//
+#articles_nav {
+
+  text-align: center;
+
+  .prev { float: left; }
+  .next { float: right; }
+
+  @media screen and ( max-width: $fh_type_respd_bkpt_2 ) {
+
+    .prev,
+    .next {
+      width: 49%;
+    }
+
+    .btn { display: block; }
+  }
+}
+
+// scss-lint:enable IdSelector

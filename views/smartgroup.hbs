@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <!-- build:css /css/_smartgroup.css -->
+    <link rel="stylesheet" href="/css/plugins/switchery/switchery.css">
+    <link rel="stylesheet" href="/css/smartgroup.css">
+    <!--endbuild-->
+
+    {{> header}}
+
+</head>
+<body>
+<div id="wrapper">
+    {{> menu}}
+    <div id="page-wrapper" class="gray-bg">
+        {{> top}}
+        {{> _smartgroup}}
+        {{> footer}}
+    </div>
+</div>
+<!-- build:js /js/smartgroup.js -->
+
+<script src="/js/plugins/switchery/switchery.min.js"></script>
+<script src="/js/smartgroup/smartgroup.js"></script>
+<script src="/js/cocatn/smartgroupDao.js"></script>
+<!--endbuild-->
+</body>
+</html>

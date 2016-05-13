@@ -1,0 +1,426 @@
+---
+title: Navbar
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/navbar.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Features - Navbar
+sidebar_right_partials:
+- components/sidebar/navbar
+sidebar_affix: true
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <a id="responsive"></a>
+
+        <div class="alert info"><strong>NOTE!</strong> The responsive menu features of the sidebars below are disabled. If you would like to see the responsive menu system just resize your browser or check out the GIF below!</div>
+
+        <h3>Responsive Navbar</h3>
+
+        <p>To set the breakpoint of the navbar simply set the <code>$fh_nav_resp_bk</code> value within your theme's variables.</p>
+
+        <img class="size-full" src="{{ file.frontMatter.base_url }}{{ img_base_url }}/animations/navbar.gif" alt="Responsive Navbar in Action">
+
+        <hr>
+
+        <a id="base"></a>
+
+        <h3>Base Navbar</h3>
+
+        <nav class="dd">
+
+            <!-- Navigation Header: -->
+            <div class="header">
+                <a class="brand" href="#">Brand!</a>
+            </div>
+
+            <!-- Navigation Body: -->
+            <div class="body">
+                <ul class="nav_right">
+
+                    <!-- Navigation Items: -->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;nav class="dd">
+
+    &lt;!-- Navigation Header: -->
+    &lt;div class="header">
+        &lt;a class="brand" href="#">Brand!&lt;/a>
+        &lt;button id="nav_hmbgr_btn">
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+        &lt;/button>
+    &lt;/div>
+
+    &lt;!-- Navigation Body: -->
+    &lt;div class="body">
+        &lt;ul class="nav_right">
+
+            &lt;!-- Navigation Items: -->
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/nav></code></pre>
+
+        <hr>
+
+        <a id="graphic_brand"></a>
+
+        <h3>Graphic Brand</h3>
+
+        <nav class="dd">
+
+            <!-- Navigation Header: -->
+            <div class="header">
+                <a class="brand_img" href="#"><img src="{{ file.frontMatter.base_url }}{{ img_base_url }}/logo_black.svg" alt="Test Logo"></a>
+            </div>
+
+            <!-- Navigation Body: -->
+            <div class="body">
+                <ul class="nav_right">
+
+                    <!-- Navigation Items: -->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;nav class="dd">
+
+    &lt;!-- Navigation Header: -->
+    &lt;div class="header">
+        &lt;a class="brand_img" href="#">&lt;img src="{{ file.frontMatter.base_url }}{{ img_base_url }}/logo_black.svg" alt="Test Logo">&lt;/a>
+        &lt;button id="nav_hmbgr_btn">
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+        &lt;/button>
+    &lt;/div>
+
+    &lt;!-- Navigation Body: -->
+    &lt;div class="body">
+        &lt;ul class="nav_right">
+
+            &lt;!-- Navigation Items: -->
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/nav></code></pre>
+
+        <hr>
+
+        <a id="left_items"></a>
+
+        <h3>Left Items</h3>
+
+        <nav class="dd">
+
+            <!-- Navigation Header: -->
+            <div class="header">
+                <a class="brand" href="#">Brand!</a>
+            </div>
+
+            <!-- Navigation Body: -->
+            <div class="body">
+                <ul class="nav_left">
+
+                    <!-- Navigation Items: -->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;nav class="dd">
+
+    &lt;!-- Navigation Header: -->
+    &lt;div class="header">
+        &lt;a class="brand" href="#">Brand!&lt;/a>
+        &lt;button id="nav_hmbgr_btn">
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+        &lt;/button>
+    &lt;/div>
+
+    &lt;!-- Navigation Body: -->
+    &lt;div class="body">
+        &lt;ul class="nav_left">
+
+            &lt;!-- Navigation Items: -->
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/nav></code></pre>
+
+        <hr>
+
+        <a id="left_right_items"></a>
+
+        <h3>Left &amp; Right Items</h3>
+
+        <nav class="dd">
+
+            <!-- Navigation Header: -->
+            <div class="header">
+                <a class="brand" href="#">Brand!</a>
+            </div>
+
+            <!-- Navigation Body: -->
+            <div class="body">
+
+                <!-- Navigation List Left: -->
+                <ul class="nav_left">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+
+                <!-- Navigation List Right: -->
+                <ul class="nav_right">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;nav class="dd">
+
+    &lt;!-- Navigation Header: -->
+    &lt;div class="header">
+        &lt;a class="brand" href="#">Brand!&lt;/a>
+        &lt;button id="nav_hmbgr_btn">
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+        &lt;/button>
+    &lt;/div>
+
+    &lt;!-- Navigation Body: -->
+    &lt;div class="body">
+
+        &lt;!-- Navigation List Left: -->
+        &lt;ul class="nav_left">
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+        &lt;/ul>
+
+        &lt;!-- Navigation List Right: -->
+        &lt;ul class="nav_right">
+            &lt;li>&lt;a href="#">Login&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Register&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/nav></code></pre>
+
+        <hr>
+
+        <a id="dropdown"></a>
+
+        <h3>Dropdown</h3>
+
+        <nav class="dd">
+
+            <!-- Navigation Header: -->
+            <div class="header">
+                <a class="brand" href="#">Brand!</a>
+            </div>
+
+            <!-- Navigation Body: -->
+            <div class="body">
+                <ul class="nav_left">
+
+                    <!-- Navigation Items: -->
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+
+                        <!-- Dropdown Menu: -->
+                        <ul>
+                            <li><a href="#">Our Team</a></li>
+                            <li class="divider_after"><a href="#">Values</a></li>
+                            <li><a href="#">Location &amp; Hours</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;nav class="dd">
+
+    &lt;!-- Navigation Header: -->
+    &lt;div class="header">
+        &lt;a class="brand" href="#">Brand!&lt;/a>
+        &lt;button id="nav_hmbgr_btn">
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+        &lt;/button>
+    &lt;/div>
+
+    &lt;!-- Navigation Body: -->
+    &lt;div class="body">
+        &lt;ul class="nav_left">
+
+            &lt;!-- Navigation Items: -->
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>
+                &lt;a href="#">About&lt;/a>
+
+                &lt;!-- Dropdown Menu: -->
+                &lt;ul>
+                    &lt;li>&lt;a href="#">Our Team&lt;/a>&lt;/li>
+                    &lt;li class="divider_after">&lt;a href="#">Values&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Location &amp; Hours&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/nav></code></pre>
+
+        <hr>
+
+        <a id="input_group"></a>
+
+        <h3>Input Groups</h3>
+
+        <nav class="dd">
+
+            <!-- Navigation Header: -->
+            <div class="header">
+                <a class="brand" href="#">Brand!</a>
+            </div>
+
+            <!-- Navigation Body: -->
+            <div class="body">
+                <ul class="nav_right">
+
+                    <!-- Navigation Items: -->
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+
+                    <!-- Inputs List Item: -->
+                    <li class="inputs">
+                        <div class="valign">
+
+                            <!-- Input Group: -->
+                            <div class="input_group sm">
+                                <input class="input" type="text" placeholder="Testing Input">
+                                <div class="group_btn">
+                                    <button class="btn">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;nav class="dd">
+
+    &lt;!-- Navigation Header: -->
+    &lt;div class="header">
+        &lt;a class="brand" href="#">Brand!&lt;/a>
+        &lt;button id="nav_hmbgr_btn">
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+        &lt;/button>
+    &lt;/div>
+
+    &lt;!-- Navigation Body: -->
+    &lt;div class="body">
+        &lt;ul class="nav_right">
+
+            &lt;!-- Navigation Items: -->
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+
+            &lt;!-- Inputs List Item: -->
+            &lt;li class="inputs">
+                &lt;div class="valign">
+
+                    &lt;!-- Input Group: -->
+                    &lt;div class="input_group sm">
+                        &lt;input class="input" type="text" placeholder="Testing Input">
+                        &lt;div class="group_btn">
+                            &lt;button class="btn">Search&lt;/button>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/nav></code></pre>
+
+        <hr>
+
+        <a id="affixd"></a>
+
+        <h3>Affix'd Navbar</h3>
+
+        <p>Add an <code>.affix</code> class to the existing <code>nav.dd</code> element. You also may want to add padding to the top of your page - eg: adding padding-top to your <code>body</code> element the same height as the navbar.</p>
+
+        <div class="alert info">
+            <p><strong>EXAMPLE:</strong> This demo-site uses an affix'd nabar - just look up!</p>
+        </div>
+
+        <pre><code class="language-markup">&lt;nav class="dd affix">
+
+    &lt;!-- Navigation Header: -->
+    &lt;div class="header">
+        &lt;a class="brand" href="#">Brand!&lt;/a>
+        &lt;button id="nav_hmbgr_btn">
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+            &lt;span>&lt;/span>
+        &lt;/button>
+    &lt;/div>
+
+    &lt;!-- Navigation Body: -->
+    &lt;div class="body">
+        &lt;ul class="nav_right">
+
+            &lt;!-- Navigation Items: -->
+            &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/nav></code></pre>
+
+    {{/content}}
+
+{{/extend}}

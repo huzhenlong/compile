@@ -1,0 +1,19 @@
+// Remove padding on tables + smaller font-size for variables
+.sitevars {
+
+  td,
+  th {
+    padding: 0;
+    font-size: 0.6em;
+    border-bottom: 1px #ddd solid;
+  }
+
+  th { width: 60%; }
+  td { width: 40%; }
+
+  // Remove border from last td/th
+  tr:last-child td,
+  tr:last-child th {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/_smsTotalCase.css?v=d658359d9e">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css?v=f17572ef48">
+    
+    
+    <script src="/js/main.js?v=7f2ece8454"></script>
+<body>
+
+
+<!--header start-->
+<nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header" style="text-align: center;float: none;">
+        <a class="navbar-brand" href="#" style="float: none;display: block;color:#fff;">任务详细统计数据</a>
+    </div>
+</nav>
+<!--header end-->
+
+<!--tab start-->
+<div id="tabs"></div>
+<!--tab end-->
+
+<!--总体情况 start-->
+<div id="totalCase" style="display: none;" ng-app="total" ng-controller="totalCase">
+    <div class="ibox">
+        <h4>{[{taskInfo}]}</h4>
+
+        <!--任务信息列表-->
+        <div class="ibox-content taskTable" style="padding: 15px 20px 20px 20px;"></div>
+    </div>
+    <div class="ibox">
+        <h4>{[{totalCase}]}</h4>
+
+        <!--总体情况列表-->
+        <div class="ibox-content totalTable" style="padding: 15px 20px 20px 20px;"></div>
+    </div>
+</div>
+<!--总体情况 end-->
+
+
+<script src="/js/smsTotalCase.js?v=f62c0cb14f"></script>
+</body>
+</html>

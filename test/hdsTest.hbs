@@ -1,0 +1,32 @@
+<div id="content"></div>
+<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script src="./bower_components/handlebars/handlebars.min.js"></script>
+<script id="demoTpl" type="text-x-handlebars-template">
+	  { {#each this}}
+        <div>
+         <h1>  { {title} } </h1>
+         <p> { {content} } </p>
+        </div>
+      { {/each}}
+</script>
+
+<script>
+        //示例数据
+	var data = [
+		{ "title":"aaa","content":"contentaaa"},
+		{ "title":"aaa","content":"contentaaa"},
+		{ "title":"aaa","content":"<h1>h1</h1>"},
+		{ "title":"aaa","content":"contentaaa"}
+	];
+
+    //jquery初始化完成
+	$(function(){
+         //编译模板
+		 var demoTpl = Handlebars.compile($("#demoTpl").html());
+		 //获取渲染后的html内容
+		 var html = demoTpl(data);
+		 //渲染dom，目标为#content
+		 $("#content").html(html)
+	});
+
+</script>

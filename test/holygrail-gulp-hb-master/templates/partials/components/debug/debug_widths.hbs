@@ -1,0 +1,27 @@
+<style>
+#debug_widths {
+    background: #000;
+    color: #FFF;
+    display: block;
+    font-size: 0.8em;
+    left: 0;
+    opacity: 0.8;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 999999999999999999999;
+}
+</style>
+
+<script>
+$( window ).on( 'resize', function() {
+
+    $( '#width_content' ).text( $( '#_c h1' ).width() + 'px' );
+    $( '#width_sidebar_left' ).text( $( '#_sl h4' ).width() + 'px' );
+    $( '#width_sidebar_right' ).text( $( '#_sr h4' ).width() + 'px' );
+});
+</script>
+
+<div id="debug_widths">
+    Content <span id="width_content"></span> - Sidebar Left <span id="width_sidebar_left"></span> - Sidebar Right <span id="width_sidebar_right"></span>
+</div>

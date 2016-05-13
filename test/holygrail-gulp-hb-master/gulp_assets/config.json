@@ -1,0 +1,82 @@
+{
+  "public_url"    : "",
+  "public_domain" : "",
+  "base_url"      : "",
+
+  "bower_components" : "./bower_components",
+
+  "build_dir"  : "./public",
+  "build_html" : "./public/**/*.html",
+
+  "js_base_url"   : "js",
+  "js_assets"     : "./public/js",
+  "js_vendor"     : "./public/js/vendor",
+  "js_files"      : "./public/js/**/*.js",
+  "js_site_files" : "./public/js/*.js",
+
+  "css_base_url"   : "css",
+  "css_assets"     : "./public/css",
+  "css_vendor"     : "./public/css/vendor",
+  "main_css_asset" : "./public/css/main.css",
+
+  "font_base_url" : "fonts",
+  "font_assets"   : "./public/fonts",
+  "font_vendor"   : "./public/fonts/vendor",
+
+  "img_base_url" : "img",
+  "img_assets"   : "./public/img",
+  "img_vendor"   : "./public/img/vendor",
+
+  "sass_assets"                 : "./sass",
+  "sass_vendor"                 : "./sass/vendor",
+  "sass_sourcemap_relative_dir" : "../../sass",
+
+  "hbs_pages"    : "./templates/pages/**/*.hbs",
+  "hbs_partials" : "./templates/partials/**/*.hbs",
+
+  "hbs_data"     : [ "./gulp_assets/config.json" ],
+
+  "hbs_helpers"  : [
+    "./templates/helpers/*.js",
+    "./node_modules/handlebars-helpers/lib/helpers/helpers-layouts.js",
+    "./node_modules/handlebars-helpers/lib/helpers/helpers-comparisons.js"
+  ],
+
+  "opts_prettify" : {
+    "indent_size"           : 2,
+    "unformatted"           : ["a", "sub", "sup", "b", "i", "u", "strong"],
+    "preserve_newlines"     : false,
+    "max_preserve_newlines" : 2
+  },
+
+  "opts_sass" : {
+    "sourcemap" : true,
+    "precision" : 10
+  },
+
+  "site" : {
+    "version"     : "0",
+    "year"        : "2015",
+    "author"      : "John Parks",
+    "brand"       : "Holy Grail",
+    "title"       : "Holy Grail Static Site Generator",
+    "keywords"    : "Gulp, HTML5, CSS3, SASS",
+    "description" : "A static site generator based on Node.js technologies",
+    "social" : {
+      "twitter": {
+        "via"      : "folkhack",
+        "username" : "folkhack"
+      },
+      "facebook" : "http://www.facebook.com/folkhackstudios",
+      "linkedin" : "https://www.linkedin.com/in/jmparks",
+      "gplus"    : "http://test_gplus.com"
+    },
+    "favicon_msapplication_tile_color" : "#222222",
+    "favicon_meta_theme_color"         : "#ffffff"
+  },
+
+  "google" : {
+    "ga_tracking_code" : "",
+    "site_verification_code" : ""
+  }
+}

@@ -1,0 +1,92 @@
+---
+title: One Full
+template_code_class: one_full
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: layouts/holygrail.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Layouts - One Full
+page_js_assets:
+- js/layout_switcher.js
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        {{> components/sidebar/layout_nav }}
+
+        <a id="styleguide"></a>
+
+        <h3>Styleguide:</h3>
+
+        {{> components/styleguide/content_short }}
+
+        <hr>
+
+        <a id="hbs"></a>
+
+        <h3>Handlebars:</h3>
+
+        <pre><code class="language-handlebars">---
+title: One Full
+template_code_class: one_full
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: holygrail/holygrail.html
+breadcrumbs:
+- Holy Grail|../holygrail.html
+- Layouts - One Full
+---
+\{{#extend "layouts/holygrail"}}
+
+    \{{#content "content" }}
+
+        \{{> components/styleguide/content }}
+
+    \{{/content}}
+
+\{{/extend}}</code></pre>
+
+        <hr>
+
+        <a id="html"></a>
+
+        <h3>HTML:</h3>
+
+        <div class="alert info">
+            <p><strong>NOTE!</strong> The "Main Wrapper" and "Main Gutter" divs do not need to be included for the "one_full" layout configuration.</p>
+        </div>
+
+        <pre><code class="language-markup">&lt;!-- Body Wrapper -->
+&lt;div class="body_wrap">
+
+    &lt;!-- Main Wrapper -->
+    &lt;div id="main" class="clearfix one_full">
+
+        &lt;!-- Main Gutter -->
+        &lt;div class="gutter_main">
+
+            &lt;!-- Content -->
+            &lt;div id="content">
+
+                &lt;!-- Content Gutter -->
+                &lt;div class="gutter_content">
+
+                    &lt;!-- Content -->
+
+                &lt;/div> &lt;!-- /Content Gutter -->
+            &lt;/div> &lt;!-- /Content -->
+
+        &lt;/div> &lt;!-- /Main Gutter -->
+    &lt;/div> &lt;!-- /Main Wrapper -->
+
+&lt;/div> &lt;!-- /Body Wrapper --></code></pre>
+
+    {{/content}}
+
+{{/extend}}

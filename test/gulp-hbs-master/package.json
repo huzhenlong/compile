@@ -1,0 +1,23 @@
+{
+  "name": "sdd",
+  "version": "0.0.1",
+  "description": "SDD Demo",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "del": "^2.2.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-data": "^1.2.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mustache-plus": "^1.0.1",
+    "gulp-nunjucks-render": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-swig": "^0.8.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.8.0"
+  }
+}

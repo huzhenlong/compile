@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Index - Title</title>
+        <link rel="stylesheet" href="css/global.css">
+    </head>
+    <body>
+        <div class="wrapper-outer">
+            <div class="wrapper-inner">
+                {{> header}}
+                {{> navigation}}
+                <p>Hello {{firstName}}</p>
+                <p>HELLO! {{capitals firstName}}</p>
+                {{> footer}}
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script>
+            document.write(helloWorld());
+        </script>
+    </body>
+</html>

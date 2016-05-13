@@ -1,0 +1,13 @@
+{
+    "firstName" : "John Doe III",
+    "navlinks" : [{
+        "caption" : "LinkOne",
+        "url" : "/home/blog1.html"
+    },{
+        "caption" : "LinkTwo",
+        "url" : "/home/blog2.html"
+    },{
+        "caption" : "LinkThree",
+        "url" : "/home/blog3.html"
+    }]
+}

@@ -1,0 +1,49 @@
+// Bourbon
+@import "../sass/vendor/bourbon/bourbon";
+
+// Base configuration overrides
+@import "../sass/variables";
+
+// 3rd party library support:
+@import "../sass/vendor/normalize";           // normalize.css
+@import "../sass/vendor/open_sans/mixins";    // Open Sans
+@import "../sass/vendor/open_sans/variables"; // Open Sans
+@import "../sass/vendor/open_sans/Regular";   // Open Sans
+@import "../sass/vendor/open_sans/Bold";      // Open Sans
+@import "../sass/vendor/open_sans/Italic";    // Open Sans
+
+//
+// Mixin Libraries
+// - Depends on Bourbon ("bourbon": "4.2.2")
+// - Dependencies must be loaded first for dependency checking
+// - Functions must be loaded before variables (used within variables for layout calculations
+//
+@import "../sass/vendor/holygrail/dependencies";
+@import "../sass/vendor/holygrail/functions";
+@import "../sass/vendor/holygrail/variables";
+@import "../sass/vendor/holygrail/mixins";
+@import "../sass/vendor/holygrail/utilities";
+
+// Holy Grail Core
+@import "../sass/vendor/holygrail/global";
+@import "../sass/vendor/holygrail/type";
+@import "../sass/vendor/holygrail/size";
+@import "../sass/vendor/holygrail/color";
+
+//
+//  Modules
+//
+@import "../sass/vendor/holygrail/modules/layout/holygrail";
+@import "../sass/vendor/holygrail/modules/layout/holygrail_sidebars";
+
+@import "../sass/vendor/holygrail/modules/nav/navbar";
+
+@import "../sass/vendor/holygrail/modules/generic/crumbs";
+@import "../sass/vendor/holygrail/modules/generic/footer";
+@import "../sass/vendor/holygrail/modules/generic/wells";
+@import "../sass/vendor/holygrail/modules/wordpress/images";
+
+//
+//  Client Theme:
+//
+@import "../sass/client/default_theme";

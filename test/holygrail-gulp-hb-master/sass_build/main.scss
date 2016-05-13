@@ -1,0 +1,80 @@
+// Fixed-width site
+$fh_hg_content_full_w       : 1200px;
+$fh_hg_content_full_w_rspnd : 1220px;
+
+// Bourbon
+@import "../sass/vendor/bourbon/bourbon";
+
+// Base configuration overrides
+@import "../sass/variables";
+
+// 3rd party library support:
+@import "../sass/vendor/normalize";           // normalize.css
+@import "../sass/vendor/open_sans/mixins";    // Open Sans
+@import "../sass/vendor/open_sans/variables"; // Open Sans
+@import "../sass/vendor/open_sans/Regular";   // Open Sans
+@import "../sass/vendor/open_sans/Bold";      // Open Sans
+@import "../sass/vendor/open_sans/Italic";    // Open Sans
+
+//
+// Mixin Libraries
+// - Depends on Bourbon ("bourbon": "4.2.2")
+// - Dependencies must be loaded first for dependency checking
+// - Functions must be loaded before variables (used within variables for layout calculations
+//
+@import "../sass/vendor/holygrail/dependencies";
+@import "../sass/vendor/holygrail/functions";
+@import "../sass/vendor/holygrail/variables";
+@import "../sass/vendor/holygrail/mixins";
+@import "../sass/vendor/holygrail/utilities";
+
+// Holy Grail Core
+@import "../sass/vendor/holygrail/global";
+@import "../sass/vendor/holygrail/type";
+@import "../sass/vendor/holygrail/size";
+@import "../sass/vendor/holygrail/color";
+
+//
+//  Modules
+//
+@import "../sass/vendor/holygrail/modules/layout/holygrail";
+@import "../sass/vendor/holygrail/modules/layout/holygrail_sidebars";
+
+@import "../sass/vendor/holygrail/modules/list/base";
+
+@import "../sass/vendor/holygrail/modules/table/base";
+@import "../sass/vendor/holygrail/modules/table/extended";
+
+@import "../sass/vendor/holygrail/modules/form/base_elements";
+@import "../sass/vendor/holygrail/modules/form/base_buttons";
+@import "../sass/vendor/holygrail/modules/form/fields";
+@import "../sass/vendor/holygrail/modules/form/input_size";
+@import "../sass/vendor/holygrail/modules/form/button_size";
+@import "../sass/vendor/holygrail/modules/form/button_color";
+@import "../sass/vendor/holygrail/modules/form/input_groups";
+@import "../sass/vendor/holygrail/modules/form/validation";
+
+@import "../sass/vendor/holygrail/modules/nav/navbar";
+
+@import "../sass/vendor/holygrail/modules/grid/simple";
+
+@import "../sass/vendor/holygrail/modules/generic/crumbs";
+@import "../sass/vendor/holygrail/modules/generic/footer";
+@import "../sass/vendor/holygrail/modules/generic/wells";
+@import "../sass/vendor/holygrail/modules/generic/alerts";
+@import "../sass/vendor/holygrail/modules/generic/pagination";
+
+@import "../sass/vendor/holygrail/modules/wordpress/images";
+
+
+//
+//  In-dev Features:
+//
+@import "../sass/indev/test_interface_feeds_base";
+@import "../sass/indev/test_interface_articles";
+
+
+//
+//  Client Theme:
+//
+@import "../sass/client/default_theme";

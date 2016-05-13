@@ -1,0 +1,282 @@
+---
+title: Forms Baseline
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/forms.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Features - Forms Baseline
+sidebar_right_partials:
+- components/sidebar/forms
+sidebar_affix: true
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <a id="base"></a>
+
+        <h3>Base Form:</h3>
+
+        <label>Single-line text <code>input</code> field:</label>
+        <input type="text" value="Default text">
+
+        <label>Single-line text <code>input</code> field w/placeholder:</label>
+        <input type="text" placeholder="Placeholder Text">
+
+        <label>Multi-row <code>textarea</code> (rows="4" cols="20"):</label>
+        <textarea rows="4" cols="20">Default text</textarea>
+
+        <label><input type="radio"> Radio 1</label>
+        <label><input type="radio"> Radio 2</label>
+        <label><input type="radio"> Radio 3</label>
+
+        <br>
+
+        <pre><code class="language-markup">&lt;label>Single-line text &lt;code>input&lt;/code> field:&lt;/label>
+&lt;input type="text" value="Default text">
+
+&lt;label>Single-line text &lt;code>input&lt;/code> field w/placeholder:&lt;/label>
+&lt;input type="text" placeholder="Placeholder Text">
+
+&lt;label>Multi-row &lt;code>textarea&lt;/code> (rows="4" cols="20"):&lt;/label>
+&lt;textarea rows="4" cols="20">Default text&lt;/textarea>
+
+&lt;label>&lt;input type="radio"> Radio 1&lt;/label>
+&lt;label>&lt;input type="radio"> Radio 2&lt;/label>
+&lt;label>&lt;input type="radio"> Radio 3&lt;/label></code></pre>
+
+        <hr>
+
+        <a id="text"></a>
+
+        <h3>Base Form W/Field Wrappers:</h3>
+
+        <div class="field">
+            <label>Single-line text <code>input</code> field:</label>
+            <input type="text" value="Default text">
+        </div>
+
+        <div class="field">
+            <label>Single-line text <code>input</code> field w/placeholder:</label>
+            <input type="text" placeholder="Placeholder Text">
+        </div>
+
+        <div class="field">
+            <label>Multi-row <code>textarea</code> (rows="4" cols="20"):</label>
+            <textarea rows="4" cols="20">Default text</textarea>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>Single-line text &lt;code>input&lt;/code> field:&lt;/label>
+    &lt;input type="text" value="Default text">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Single-line text &lt;code>input&lt;/code> field w/placeholder:&lt;/label>
+    &lt;input type="text" placeholder="Placeholder Text">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Multi-row &lt;code>textarea&lt;/code> (rows="4" cols="20"):&lt;/label>
+    &lt;textarea rows="4" cols="20">Default text&lt;/textarea>
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="select"></a>
+
+        <h3>Select Input:</h3>
+
+        <div class="field">
+            <label>Standard <code>select</code> element (dropdown box):</label>
+            <select>
+                <option>one</option>
+                <option selected="selected">two (default)</option>
+                <option>three</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>A <code>select</code> element with <code>size="3"</code> (listbox):</label>
+            <select multiple="multiple" size="3">
+                <option>one</option>
+                <option selected="selected">two (default)</option>
+                <option>three</option>
+            </select>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>Standard &lt;code>select&lt;/code> element (dropdown box):&lt;/label>
+    &lt;select>
+        &lt;option>one&lt;/option>
+        &lt;option selected="selected">two (default)&lt;/option>
+        &lt;option>three&lt;/option>
+    &lt;/select>
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>A &lt;code>select&lt;/code> element with &lt;code>size="3"&lt;/code> (listbox):&lt;/label>
+    &lt;select multiple="multiple" size="3">
+        &lt;option>one&lt;/option>
+        &lt;option selected="selected">two (default)&lt;/option>
+        &lt;option>three&lt;/option>
+    &lt;/select>
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="checks"></a>
+
+        <h3>Checks &amp; Radios:</h3>
+
+        <div class="field">
+            <label>Check <code>input</code> Wrapped Field:</label>
+            <div class="check">
+                <label><input type="checkbox"> Checkbox 1</label>
+            </div>
+            <div class="check">
+                <label><input type="checkbox" checked="checked"> Checkbox 2 (initially checked)</label>
+            </div>
+        </div>
+
+        <div class="field required">
+            <label>Radio <code>input</code> Wrapped Field:</label>
+            <div class="radio">
+                <label><input type="radio"> Radio 1</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" checked="checked"> Radio 2 (initially checked)</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio"> Radio 3</label>
+            </div>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>Check &lt;code>input&lt;/code> Wrapped Field:&lt;/label>
+    &lt;div class="check">
+        &lt;label>&lt;input type="checkbox"> Checkbox 1&lt;/label>
+    &lt;/div>
+    &lt;div class="check">
+        &lt;label>&lt;input type="checkbox" checked="checked"> Checkbox 2 (initially checked)&lt;/label>
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="field required">
+    &lt;label>Radio &lt;code>input&lt;/code> Wrapped Field:&lt;/label>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio"> Radio 1&lt;/label>
+    &lt;/div>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio" checked="checked"> Radio 2 (initially checked)&lt;/label>
+    &lt;/div>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio"> Radio 3&lt;/label>
+    &lt;/div>
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="file"></a>
+
+        <h3>Files:</h3>
+
+        <div class="field">
+            <label>File <code>input</code> Wrapped Field:</label>
+            <input type="file">
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>File &lt;code>input&lt;/code> Wrapped Field:&lt;/label>
+    &lt;input type="file">
+&lt;/div></code></pre>
+
+        <hr>
+
+        <a id="fieldsets"></a>
+
+        <h3>Fieldsets:</h3>
+
+        <fieldset>
+            <legend>Legend</legend>
+            <div class="radio">
+                <label><input type="radio"> Radio button 1</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" checked="checked"> Radio button 2 (initially checked)</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="required">
+            <legend>Check those that apply</legend>
+            <div class="check">
+                <label><input type="checkbox"> Checkbox 1</label>
+            </div>
+            <div class="check">
+                <label><input type="checkbox" checked="checked"> Checkbox 2 (initially checked)</label>
+            </div>
+        </fieldset>
+
+        <pre><code class="language-markup">&lt;fieldset>
+    &lt;legend>Legend&lt;/legend>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio"> Radio button 1&lt;/label>
+    &lt;/div>
+    &lt;div class="radio">
+        &lt;label>&lt;input type="radio" checked="checked"> Radio button 2 (initially checked)&lt;/label>
+    &lt;/div>
+&lt;/fieldset>
+
+&lt;fieldset class="required">
+    &lt;legend>Check those that apply&lt;/legend>
+    &lt;div class="check">
+        &lt;label>&lt;input type="checkbox"> Checkbox 1&lt;/label>
+    &lt;/div>
+    &lt;div class="check">
+        &lt;label>&lt;input type="checkbox" checked="checked"> Checkbox 2 (initially checked)&lt;/label>
+    &lt;/div>
+&lt;/fieldset></code></pre>
+
+        <hr>
+
+        <a id="buttons"></a>
+
+        <h3>Buttons:</h3>
+
+        <div class="field">
+            <label>Submit <code>input</code> (input type="submit"):</label>
+            <input type="submit" value="Make it so &raquo;">
+        </div>
+
+        <div class="field">
+            <label>Reset <code>input</code> (input type="reset"):</label>
+            <input type="reset" value="Reset">
+        </div>
+
+        <div class="field">
+            <label>Inline <code>button</code>:</label>
+            <button type="submit" >Click me baby one more time...!</button>
+        </div>
+
+        <pre><code class="language-markup">&lt;div class="field">
+    &lt;label>Submit &lt;code>input&lt;/code> (input type="submit"):&lt;/label>
+    &lt;input type="submit" value="Make it so &raquo;">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Reset &lt;code>input&lt;/code> (input type="reset"):&lt;/label>
+    &lt;input type="reset" value="Reset">
+&lt;/div>
+
+&lt;div class="field">
+    &lt;label>Inline &lt;code>button&lt;/code>:&lt;/label>
+    &lt;button type="submit" >Click me baby one more time...!&lt;/button>
+&lt;/div></code></pre>
+
+    {{/content}}
+
+{{/extend}}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css?v=f17572ef48">
+    
+    
+    <script src="/js/main.js?v=7f2ece8454"></script>
+        <link rel="stylesheet" href="/css/smartGroupModal.css?v=09fc30e6a2">
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="navMenuBox"></div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div id="levelSetting" class="active">
+
+            <link rel="stylesheet" href="/css/part/_parameterSetting.css">
+            
+            <div ng-app="lv" ng-controller="lvSetting" ng-cloak>
+            
+            
+                <!--等级设置 开始-->
+                <div class="row wrapper border-bottom white-bg page-heading content_breadcrumb">
+                    <div class="col-lg-12" style="margin-left: 5px;">
+                        <h3 class="page_title">{[{lvSetting}]}</h3>
+                        <button type="button" class="btn btn-white pull-right" title="{[{addLv}]}" id="addLevel">
+                            <i class="fa fa-vine"></i>
+                        </button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <!--等级设置 结束-->
+            
+                <!--等级模块 开始-->
+                <div class="wrapper wrapper-content">
+                    <div class="row" id="LvRow">
+                    </div>
+                </div>
+                <!--等级模块 结束-->
+            
+                <!--等级配置 开始-->
+                <div class="row wrapper border-bottom white-bg page-heading content_breadcrumb" style="margin-bottom: 15px;">
+                    <div class="col-lg-12" style="margin-left: 5px;">
+                        <h3 class="page_title">{[{lvConfig}]}</h3>
+                        <button type="button" class="btn btn-white pull-right borderColor" title="{[{brandConfig}]}" id="brandConfig" disabled>
+                            <i class="fa fa-sitemap"></i>
+                        </button>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <!--等级配置 结束-->
+            
+                <!--配置 开始-->
+                <div class="tabs-container" id="configContent">
+                </div>
+                <!--配置 结束-->
+            
+            </div>
+            
+            <script src="/js/angularJs/_parameterSetting.js?v=3eade07aed"></script>
+        </div>
+
+
+        <div class="x-footer">
+            <div>
+                <strong>Copyright</strong> Xrewin Company &copy; 2015-2016
+            </div>
+        </div>    </div>
+</div>
+<script src="/js/parameterSetting.js?v=3eade07aed"></script>
+
+</body>
+</html>

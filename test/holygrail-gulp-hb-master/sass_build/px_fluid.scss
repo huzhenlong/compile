@@ -1,0 +1,7 @@
+
+// Base configuration for a pixel-based fluid content layout
+$fh_hg_content_full_w       : 100%;
+$fh_hg_content_full_w_rspnd : 100%;
+
+// Grab commonly-shared alternative layout dependencies
+@import "alt_layout_imports";

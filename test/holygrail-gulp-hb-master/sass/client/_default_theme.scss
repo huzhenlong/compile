@@ -1,0 +1,60 @@
+//
+//  This is a VERY basic example of a default theme for a client
+//  - Configuration variables should be set in /sass/_variables.scss
+//
+
+@import "navbar";
+@import "color_pallet";
+@import "prism";
+@import "grid";
+@import "sitevars";
+
+// scss-lint:disable IdSelector, QualifyingElement
+
+// Padding-top for affix'd nav
+body { padding-top: $fh_nav_h; }
+
+//
+//  Banner (only on homepage)
+//
+header {
+
+  @include background( linear-gradient( #fff, #E4E4E4 ) left repeat );
+
+  border-bottom: 1px #666 solid;
+  margin-bottom: 30px;
+  padding: 3em 1em 0;
+  text-align: center;
+}
+
+//
+//  Base elements
+//
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Slab", serif;
+}
+
+// A element styling
+a { color: $fh_color_info; }
+
+//
+//  Footer
+//
+footer {
+
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+
+  // Z-index to position above sticky sidebars:
+  z-index: 2000;
+}
+
+// Fix navigation brand image in content
+#content nav.dd img { max-width: 100%; }
+
+// scss-lint:enable SelectorFormat, IdSelector, QualifyingElement

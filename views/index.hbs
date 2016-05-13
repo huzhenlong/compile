@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    {{> header}}
+</head>
+<body>
+<div id="wrapper">
+
+    {{> menu}}
+
+    <div id="page-wrapper" class="gray-bg">
+
+        {{> top}}
+
+        <div class="wrapper wrapper-content animated fadeInRight" style="padding: 5px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{> _index}}
+                </div>
+            </div>
+        </div>
+
+        {{> footer}}
+
+    </div>
+</div>
+
+{{> loading}}
+
+<!-- build:js /js/indexChartJs.js -->
+
+<script src="/js/plugins/echarts/echarts.min.js"></script>
+<script src="/js/chart/eChart.js"></script>
+<script src="/js/totalCase/indexChart.js"></script>
+<!--endbuild-->
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "holygrail-gulp-hb",
+  "version": "0.0-indev",
+  "homepage": "https://github.com/folkhack/holygrail-gulp-hb",
+  "author": "John Parks",
+  "description": "A static site generator built around shannonmoeller's gulp-hb and Folkhack's Holy Grail",
+  "license": "MIT",
+  "main": [
+    "gulpfile.js",
+    "gulp_assets/asset_map.js",
+    "gulp_assets/config.json",
+    "sass/_variables.scss",
+    "sass/main.scss",
+    "templates/helpers/holy_grail.js",
+    "templates/helpers/partial.js",
+    "templates/pages/*",
+    "templates/partials/layouts/minimal.hbs",
+    "templates/partials/layouts/holygrail.hbs",
+    "templates/partials/components/**/*.hbs"
+  ],
+  "dependencies": {
+    "modernizr": "2.7.0",
+    "respond": "1.4.2",
+    "open-sans-fontface": "1.2.1",
+    "bourbon": "4.2.2",
+    "neat": "1.7.2",
+    "jquery": "1.11.*",
+    "jquery-detect-swipe": "~2.1.1",
+    "gridle": "~1.3.38",
+    "holygrail": "https://github.com/folkhack/holygrail-sass.git",
+    "normalize-css": "~3.0.3",
+    "prism": "*",
+    "font-awesome": "4.3.0"
+  }
+}

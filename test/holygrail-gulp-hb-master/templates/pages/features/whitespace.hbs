@@ -1,0 +1,220 @@
+---
+title: Whitespace
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/whitespace.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Whitespace
+sidebar_right_partials:
+- components/sidebar/whitespace
+sidebar_affix: true
+---
+{{#extend "layouts/holygrail"}}
+
+  {{#content "content" }}
+
+    <p>Another very special thanks is owed to <a href="http://www.basscss.com/docs/grid/" target="_blank">BASSCSS</a> for inspiring the implementation of a whitespace utilities in Holy Grail.</p>
+
+    <hr>
+
+    <a id="reference"></a>
+
+    <h3>Whitespace Utility Class Reference:</h3>
+
+    <div class="table_responsive">
+      <table class="striped">
+        <thead>
+          <tr>
+            <th style="width: 30%;">Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>.mar_clear</code></td>
+            <td>Clears all margins</td>
+          </tr>
+          <tr>
+            <td><code>.mar_clear_t</code></td>
+            <td>Clears top margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_clear_r</code></td>
+            <td>Clears right margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_clear_b</code></td>
+            <td>Clears bottom margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_clear_l</code></td>
+            <td>Clears left margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_1</code></td>
+            <td>Add margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_t_1</code></td>
+            <td>Add top margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_r_1</code></td>
+            <td>Add right margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_b_1</code></td>
+            <td>Add bottom margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_l_1</code></td>
+            <td>Add left margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_2</code></td>
+            <td>Add double margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_t_2</code></td>
+            <td>Add double top margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_r_2</code></td>
+            <td>Add double right margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_b_2</code></td>
+            <td>Add double bottom margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_l_2</code></td>
+            <td>Add double left margin</td>
+          </tr>
+          <tr>
+            <td><code>.mar_x_neg_1</code></td>
+            <td>Add x-axis negative margins</td>
+          </tr>
+          <tr>
+            <td><code>.mar_x_neg_2</code></td>
+            <td>Add double x-axis negative margins</td>
+          </tr>
+          <tr>
+            <td><code>.mar_x_auto</code></td>
+            <td>Add <code>margin-left: auto; margin-right: auto;</code></td>
+          </tr>
+          <tr>
+            <td><code>.pad_1</code></td>
+            <td>Add padding</td>
+          </tr>
+          <tr>
+            <td><code>.pad_x_1</code></td>
+            <td>Add x-axis padding</td>
+          </tr>
+          <tr>
+            <td><code>.pad_y_1</code></td>
+            <td>Add y-axis padding</td>
+          </tr>
+          <tr>
+            <td><code>.pad_2</code></td>
+            <td>Add double padding</td>
+          </tr>
+          <tr>
+            <td><code>.pad_x_2</code></td>
+            <td>Add double x-axis padding</td>
+          </tr>
+          <tr>
+            <td><code>.pad_y_2</code></td>
+            <td>Add double y-axis padding</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr>
+
+    <a id="clear_margins"></a>
+
+    <h3>Clearing Margins:</h3>
+
+    <p class="mar_clear_b">This paragraph has it's bottom margin removed.</p>
+    <h4 class="mar_clear">This header has all of it's margins removed.</h4>
+
+    <br>
+
+    <pre><code class="language-markup">&lt;p class="mar_clear_b">This paragraph has it's bottom margin removed.&lt;/p>
+&lt;h4 class="mar_clear">This header has all of it's margins removed.&lt;/h4></code></pre>
+
+    <hr>
+
+    <a id="adding_marings"></a>
+
+    <h3>Adding Margins:</h3>
+
+    <p>
+      <a href="#" class="btn mar_r_1">.mar_r_1</a>
+      <a href="#" class="btn mar_r_2">.mar_r_2</a>
+      <a href="#" class="btn">Howdy!</a>
+    </p>
+
+    <pre><code class="language-markup">&lt;p>
+  &lt;a href="#" class="btn mar_r_1">.mar_r_1&lt;/a>
+  &lt;a href="#" class="btn mar_r_2">.mar_r_2&lt;/a>
+  &lt;a href="#" class="btn">Howdy!&lt;/a>
+&lt;/p></code></pre>
+
+    <hr>
+
+    <a id="margin_auto_x"></a>
+
+    <h3>Margin Auto x-axis:</h3>
+
+    <p><a href="#" class="btn lg mar_x_auto" style="display: block; width: 250px;">.mar_x_auto</a></p>
+
+    <pre><code class="language-markup">&lt;p>&lt;a href="#" class="btn lg mar_x_auto" style="display: block; width: 250px;">.mar_x_auto&lt;/a>&lt;/p></code></pre>
+
+    <hr>
+
+    <a id="negative_x_margins"></a>
+
+    <h3>Negative x-axis Margins:</h3>
+
+    <p>See <a href="grid.html#gutters">Grid Gutters</a> for a use-case for negative x-axis margins!</p>
+
+    <hr>
+
+    <a id="padding"></a>
+
+    <h3>Padding:</h3>
+
+    <div class="mar_b_2 pad_1 test_border"><strong>div.pad_1 - </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure.</div>
+
+    <div class="mar_b_2 pad_2 test_border"><strong>div.pad_2 - </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure.</div>
+
+    <div class="mar_b_2 pad_x_1 test_border"><strong>div.pad_x_1 - </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure.</div>
+
+    <div class="mar_b_2 pad_x_2 pad_y_1 test_border"><strong>div.pad_x_2.pad_y_1 - </strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure.</div>
+
+    <pre><code class="language-markup">&lt;div class="mar_b_1 pad_1 test_border">&lt;strong>div.pad_1 - &lt;/strong> Lorem... &lt;/div>
+&lt;div class="mar_b_1 pad_2 test_border">&lt;strong>div.pad_2 - &lt;/strong> Lorem... &lt;/div>
+&lt;div class="mar_b_1 pad_x_1 test_border">&lt;strong>div.pad_x_1 - &lt;/strong> Lorem... &lt;/div>
+&lt;div class="mar_b_1 pad_x_2 pad_y_1 test_border">&lt;strong>div.pad_x_2.pad_y_1 - &lt;/strong> Lorem... &lt;/div></code></pre>
+
+  {{/content}}
+
+{{/extend}}

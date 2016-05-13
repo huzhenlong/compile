@@ -1,0 +1,108 @@
+---
+title: Affix'd Sidebars
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: features/sidebars_affix.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Features - Sidebars Affix'd
+sidebar_right_partials:
+- components/sidebar/sidebars_affix
+sidebar_affix: true
+---
+{{#extend "layouts/holygrail"}}
+
+    {{#content "content" }}
+
+        <div class="alert info">
+            <p><strong>NOTICE!</strong> Holy Grail supports simplistic affixing of sidebars to their wrappers. This solution does <strong>not</strong> accomodate for sidebars overlaying themselves over the footer when the content is too small.</p>
+
+            <p>Unless the sidebar is a <em>typically</em> short, this only acts as a starting-point for <code>position: fixed;</code> affix'd sidebars.</p>
+        </div>
+
+        <a id="hbs"></a>
+
+        <h3>Handlebars:</h3>
+
+        <p>Just add <code>sidebar_affix: true</code> to the page's Front Matter data to add the <code>.affix</code> class to the sidebar(s).</p>
+
+        <pre><code class="language-handlebars">---
+title: Affix'd Sidebars
+template_code_class: two_right_1
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: holygrail/sidebars_affix.html
+breadcrumbs:
+- Holy Grail|../holygrail.html
+- Features - Sidebars Affix'd
+sidebar_right_partials:
+- components/sidebar/layout_nav
+sidebar_affix: true
+---
+\{{#extend "layouts/holygrail"}}
+    \{{#content "content" }}
+
+        \{{> components/styleguide/content }}
+
+    \{{/content}}
+\{{/extend}}</code></pre>
+
+        <hr>
+
+        <a id="html"></a>
+
+        <h3>HTML:</h3>
+
+        <pre><code class="language-markup">&lt;!-- Body Wrapper -->
+&lt;div class="body_wrap">
+
+    &lt;!-- Main Wrapper -->
+    &lt;div id="main" class="clearfix two_right_1">
+
+        &lt;!-- Main Gutter -->
+        &lt;div class="gutter_main">
+
+            &lt;!-- Content -->
+            &lt;div id="content">
+
+                &lt;!-- Content Gutter -->
+                &lt;div class="gutter_content">
+
+                    &lt;!-- Content -->
+
+                &lt;/div> &lt;!-- /Content Gutter -->
+            &lt;/div> &lt;!-- /Content -->
+
+            &lt;!-- Asides Wrapper -->
+            &lt;div id="asides_wrap">
+
+                &lt;!-- Sidebar Right -->
+                &lt;aside id="sidebar_right" class="affix">
+
+                    &lt;!-- Sidebar Gutter -->
+                    &lt;div class="gutter_sidebar">
+
+                        &lt;!-- Sidebar Segment -->
+                        &lt;div class="segment">
+
+                            &lt;!-- Sidebar Right Content-->
+
+                        &lt;/div>&lt;!-- /Sidebar Segment -->
+                    &lt;/div>&lt;!-- /Sidebar Gutter -->
+                &lt;/aside>&lt;!-- /Sidebar Right -->
+
+            &lt;/div> &lt;!-- /Asides Wrapper -->
+
+        &lt;/div> &lt;!-- /Main Gutter -->
+    &lt;/div> &lt;!-- /Main Wrapper -->
+
+&lt;/div> &lt;!-- /Body Wrapper --></code></pre>
+
+    {{/content}}
+
+{{/extend}}

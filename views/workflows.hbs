@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+</head>
+<body >
+<div id="wrapper">
+    {{> menu}}
+    <div id="page-wrapper" class="gray-bg">
+        {{> top}}
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{> _workflows}}
+                </div>
+            </div>
+        </div>
+       {{> footer}}
+    </div>
+</div>
+
+<!-- build:js /js/workflows.js -->
+<script type="text/javascript" src="/js/workflow/workflow.js"></script>
+<script type="text/javascript" src="/js/workflow/workflowTable.js"></script>
+<!-- endbuild -->
+</body>
+</html>

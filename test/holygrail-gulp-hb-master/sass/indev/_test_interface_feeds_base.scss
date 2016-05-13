@@ -1,0 +1,20 @@
+// Position the "articles published in" right above first page H1
+
+// scss-lint:disable IdSelector
+
+#pre_browse_by {
+  bottom: -( 2 * $fh_vr_ele_spacing );
+  position: relative;
+
+  // Margins change due to responsive headers
+  @media screen and ( max-width: $fh_type_respd_bkpt_1 ) {
+    bottom: -( 1.5 * $fh_vr_ele_spacing );
+  }
+
+  // Margins change due to responsive headers
+  @media screen and ( max-width: $fh_type_respd_bkpt_2 ) {
+    bottom: -( 1.5 * $fh_vr_respd_ele_spacing );
+  }
+}
+
+// scss-lint:enable IdSelector

@@ -1,0 +1,39 @@
+  .header_li {
+        margin: 0;
+    }
+
+    .navbar-top-links .dropdown-menu li a {
+        padding: 0;
+        margin: 0;
+    }
+
+    @media (min-width: 768px) {
+        .navbar-right .dropdown-menu {
+            right: -20px;
+        }
+    }
+
+    #userInfo {
+        margin-right: 10px;
+        position: relative;
+    }
+
+    #userInfoContent {
+        display: none;
+        position: absolute;
+        background: #fff;
+        left: -1px;
+        width: 160px;
+        border: 1px solid #f3f3f4;
+        border-top: none;
+        padding: 5px 6px;
+        font-size: 13px;
+    }
+
+    #userInfoContent p {
+        margin: 0;
+    }
+
+    #userInfoContent span {
+        font-weight: 700;
+    }

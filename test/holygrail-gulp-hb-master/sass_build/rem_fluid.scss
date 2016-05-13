@@ -1,0 +1,12 @@
+
+// Base configuration for a rem-based fluid content layout
+$fh_hg_respd_bk_pad         : 1.5rem;
+$fh_hg_content_full_w       : 100% !default;
+$fh_hg_content_full_w_respd : $fh_hg_content_full_w !default;
+$fh_hg_content_min_w        : 25rem;
+$fh_hg_gutter               : 3rem ;
+$fh_hg_sidebar_a_w          : 22rem;
+$fh_hg_sidebar_b_w          : 18rem;
+
+// Grab commonly-shared alternative layout dependencies
+@import "alt_layout_imports";

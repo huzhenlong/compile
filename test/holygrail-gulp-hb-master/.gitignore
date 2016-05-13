@@ -1,0 +1,16 @@
+bower_components
+node_modules
+.sass-cache
+
+public/css
+public/img/vendor
+public/fonts/vendor
+public/js/vendor
+public/**/*.html
+
+sass/vendor
+
+gulp_assets/lint_scss_report.json
+
+.sublime-gulp.cache
+sublime-gulp.log

@@ -1,0 +1,13 @@
+.importData li:hover a {
+        background: #1ab394;
+        color: #fff;
+    }
+
+    .ibox-tools i {
+        color: #18a689;
+        font-size: 20px;
+    }
+
+    tr.selected {
+        background: #abcdef !important;
+    }

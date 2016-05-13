@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+</head>
+<body>
+<div id="wrapper">
+    {{> menu}}
+    <div id="page-wrapper" class="gray-bg">
+        {{> top}}
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{> _smartgroups}}
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </div>
+</div>
+{{> loading}}
+<!-- build:js /js/smartgroups.js -->
+
+<script src="/js/tableList/smartgroupsTable.js"></script>
+<script src="/js/cocatn/smartgroupDao.js"></script>
+<!--endbuild-->
+</body>
+</html>

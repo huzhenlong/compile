@@ -1,0 +1,35 @@
+---
+title: View Testing Article
+template_code_class: one_full
+header_partial: components/head/default_head
+footer_partial: components/foot/default_foot
+base_url: ../
+relative_nav_url: ../
+active_uri: interfaces/article_view.html
+breadcrumbs:
+- Holy Grail|../index.html
+- Articles - View Testing Article
+---
+{{#extend "layouts/holygrail"}}
+
+    {{! Wrap entire article including header in article tags }}
+    {{#content "pre_h1" }}<article>{{/content}}
+
+    {{#content "content" }}
+
+        {{> "components/articles/article_content" }}
+
+        <hr>
+
+        <nav id="articles_nav" class="clearfix">
+            <a class="btn sm prev" href="#">&laquo; Previous</a>
+            <a class="btn sm next" href="#">Next &raquo;</a>
+            <a class="btn sm back_to_blog" href="#">Back to Articles</a>
+        </nav>
+
+    {{/content}}
+
+    {{! Wrap entire article including header in article tags }}
+    {{#content "post_content" }}</article>{{/content}}
+
+{{/extend}}

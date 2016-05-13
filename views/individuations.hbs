@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+</head>
+<body data-platform-type="users">
+<div id="wrapper">
+    {{> menu}}
+    <div id="page-wrapper" class="gray-bg">
+        {{> top}}
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{> _individuations}}
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </div>
+</div>
+{{> loading}}
+<!-- build:js /js/individuations.js -->
+
+<script src="/js/tableList/individuationTable.js"></script>
+<script src="/js/cocatn/personalizeDao.js"></script>
+<script src="/js/cocatn/smartgroupDao.js"></script>
+<script src="/js/cocatn/platformDao.js"></script>
+<!--endbuild-->
+</body>
+</html>

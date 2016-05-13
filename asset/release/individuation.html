@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/individuation.css?v=7385701a32">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css?v=f17572ef48">
+    
+    
+    <script src="/js/main.js?v=7f2ece8454"></script>
+<body>
+<div ng-app="iEditor" ng-controller="individuation">
+    <div id="Box" class="clearfix">
+        <div id="template" class="clearfix">
+            <ul class="navBar">
+                <li class="nav hover">
+                    <span class="glyphicon glyphicon-gift" title="{[{head}]}"></span>
+                </li>
+                <li class="nav">
+                    <span class="glyphicon glyphicon-picture" title="{[{img}]}"></span>
+                </li>
+                <li class="nav">
+                    <span class="glyphicon glyphicon-list" title="{[{bottom}]}"></span>
+                </li>
+                <li class="nav" id="Tem">
+                    <span class="glyphicon glyphicon-envelope" title="{[{template}]}"></span>
+                </li>
+            </ul>
+            <div class="conBox">
+                <p class="input-group">
+                    <input type="text" class="form-control"/>
+               <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" title="{[{search}]}">
+                      <i class="fa fa-search"></i>
+                  </button>
+               </span>
+                </p>
+                <button class="btn btn-primary" type="button" id="delBox" title="{[{del}]}">
+                    <i class="fa fa-trash"></i>
+                </button>
+                <div class="borderBox">
+                    <div class="con" style="display: block;" id="headerStyle"></div>
+                    <div class="con" name="imgBox" id="imgStyle"></div>
+                    <div class="con" id="footerStyle"></div>
+                    <div class="con" id="templateBox"></div>
+                </div>
+            </div>
+        </div>
+        <div class="theme-config">
+            <div class="theme-config-box">
+                <div class="spin-icon">
+                    <i class="fa fa-cogs fa-spin"></i>
+                </div>
+                <div class="skin-setttings">
+                    <div class="ediArea">
+                        <span class="whEdi" style="padding-left: 15px;">{[{width}]}：</span>
+                        <input type="number" min="600" name="w" style="margin-right: 5px;"/>
+                        <span class="whEdi" style="padding-left: 5px;">{[{height}]}：</span>
+                        <input type="number" min="800" name="h"/>
+                        <hr style="margin-top: 10px;">
+                    </div>
+                    <div class="setings-item blue-skin">
+                    <span class="skin-name">
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#SC">{[{src}]}</a>
+                    </span>
+                    </div>
+                    <div class="setings-item ultra-skin" id="del" style="padding: 10px 30px;">
+                    <span class="skin-name ">
+                        <a target="_blank" href="javascript:void(0)" class="md-skin">{[{clear}]}</a>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="editor" class="clearfix">
+            <div class="ediBtn">
+                <a type="button" class="btn btn-info" id="preview" title="{[{check}]}">
+                    <i class="fa fa-binoculars"></i></a>
+                <button type="button" class="btn btn-info clipCopy" data-toggle="modal" data-target="#leftPartModal"
+                        title="{[{addTemplate}]}">
+                    <i class="fa fa-book"></i>
+                </button>
+                <button type="button" class="btn btn-info" id="saveAllData"><i class="fa fa-save" title="{[{save}]}"></i>
+                </button>
+                <button type="button" class="btn btn-info" id="btnSendEmail" title="{[{send}]}">
+                    <i class="fa fa-paper-plane-o"></i>
+                </button>
+            </div>
+            <div id="eArea" name="Box" contenteditable="true"></div>
+        </div>
+    </div>
+    <div class="modal inmodal fade" id="leftPartModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <label for="vipFilter">{[{saveTemplate}]}：</label>
+                    <select class="form-control" style="display: inline-block; width: 100px;" name="vipFilter"
+                            id="vipFilter">
+                        <option value="headerStyle">{[{head}]}</option>
+                        <option value="imgStyle">{[{img}]}</option>
+                        <option value="footerStyle">{[{bottom}]}</option>
+                        <option value="templateBox">{[{template}]}</option>
+                    </select>
+                </div>
+                <div class="modal-body" style="padding: 10px;">
+                    <label for="clip">（Ctrl+V）</label>
+                    <textarea rows="30" cols="180" id="clip" contenteditable="true" class="clip"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="savetype" data-dismiss="modal">{[{save}]}</button>
+                    <button type="button" class="btn btn-white" data-dismiss="modal">{[{cancel}]}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal inmodal fade" id="SC" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span></button>
+                    <h4>{[{src}]}</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="sourceCode"></label><textarea rows="30" cols="180" id="sourceCode"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">{[{close}]}</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="/js/angularJs/_individuation.js"></script>
+<link rel="stylesheet" href="/css/loading.css?v=1f18a7ce7f">
+<div id="xrewinLoadingWrap">
+    <canvas id="c"></canvas>
+    <div class="xremin-mask"></div>
+</div>
+<script src="/js/loading.js?v=cc7a738f1c"></script>
+
+
+
+<script src="/js/plugins/individuationCondition/individuationCondition.js"></script>
+<script src="/js/individuation/individuationPlugin.js"></script>
+<script src="/js/plugins/ckeditor/ckeditor.js"></script>
+<script src="/js/plugins/ckeditor/adapters/jquery.js"></script>
+<script src="/js/individuation/individuation.js"></script>
+<script src="/js/plugins/jquery-ui/jquery.mousewheel.js"></script>
+<script src="/js/plugins/jquery-ui/jquery.zclip.min.js"></script>
+<script src="/js/cocatn/personalizeDao.js"></script>
+<script src="/js/cocatn/smartgroupDao.js"></script>
+<script src="/js/cocatn/platformDao.js"></script>
+
+</body>
+</html>

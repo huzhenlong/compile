@@ -1,0 +1,243 @@
+@charset "utf-8";
+#confirmGroupKey {
+    float: right;
+    font-size: 15px;
+    margin-right: 5px;
+    color: #23C6C8;
+}
+
+#confirmGroupKey:hover {
+    cursor: pointer;
+}
+
+#filterVip {
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    height: 30px;
+}
+
+#spanCon {
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.settingJson .indivCon .indivUrl {
+    position: relative;
+}
+
+.settingJson .indivCon .imgBox {
+    border: 4px #2F4050 double;
+    margin: 10px 0 0 23px;
+    overflow: auto;
+    min-height: 60px;
+    width: 300px;
+    padding: 2px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .15) inset;
+}
+
+.settingJson .indivCon .imgBox img {
+    width: 100%;
+}
+
+#delBox {
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #23c6c8;
+}
+
+.marker {
+    border: 2px dotted #23C6C8;
+    display: inline-block;
+}
+
+.filterBox input {
+    width: 100px;
+    border: 1px solid #c9cccf;
+    border-top-color: #aeb3b9;
+    padding: 4px 6px;
+    outline: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
+}
+
+.filterBox select {
+    min-width: 80px;
+    vertical-align: middle;
+    height: 25px;
+    line-height: 25px;
+    background-color: #fff;
+    border: 1px solid #c9cccf;
+    border-top-color: #aeb3b9;
+    padding: 3px 3px 3px 6px;
+    outline: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
+}
+
+.filterBox .rule, .filterBox .vipGroup {
+    height: 30px;
+    line-height: 30px;
+}
+
+.filterBox .vipGroup a {
+    color: #23C6C8;
+    display: inline;
+    margin-left: 10px;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+}
+
+.filterBox .vipGroup a:hover {
+    text-decoration: underline;
+}
+
+.filterBox .settingJson {
+    border: 2px ridge #1ab394;
+    padding: 0 5px 10px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.filterBox .settingJson .indivTxt textarea {
+    vertical-align: text-top;
+    border: 1px solid #c9cccf;
+    border-top-color: #aeb3b9;
+    margin-left: 5px;
+    padding: 4px 6px;
+    outline: 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15) inset;
+}
+
+.settingJson p {
+    background: #F8F8F8;
+    padding: 8px;
+    border-top: 1px ridge #1ab394;
+    border-bottom: 1px ridge #1ab394;
+    font-size: 14px;
+    margin: 0 -5px 10px;
+    vertical-align: middle;
+
+}
+
+.filterBox .settingJson .filterConditon {
+    margin-bottom: 10px;
+}
+
+.filterBox .settingJson .DelRule {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 15px;
+    color: #23C6C8;
+}
+
+.filterBox .settingJson .DelRule:hover {
+    text-decoration: underline;
+}
+
+.filterConditon select {
+    margin: 0 5px;
+}
+
+.filterConditon select.contacts {
+    margin-left: 40px;
+}
+
+.glyphicon-plus:before {
+    content: "\2b";
+    font-size: large;
+    vertical-align: middle;
+    color: #23C6C8;
+}
+
+.filterBox .settingJson .addConditon span {
+    color: #23C6C8;
+    font-size: 14px;
+}
+
+#checkImg:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.filterConditon .delConditon {
+    color: #23C6C8;
+    margin-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+span.saveCondition {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #23C6C8;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filterConditon .delConditon:hover {
+    text-decoration: underline;
+}
+
+#filterVip {
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    height: 30px;
+}
+
+#spanCon {
+    margin-left: 0;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.settingJson .indivCon .indivUrl .linkBox {
+    position: absolute;
+    display: inline-block;
+    top: 45%;
+}
+
+hr.one {
+    border: 1px ridge #F8F8F8 !important;
+    margin: 10px 0 !important;
+}
+
+.smsEditorTxt {
+    border: 2px dotted #23C6C8;
+    display: inline-block;
+}
+
+#addsettingJson {
+    background-color: #23C6C8;
+    border-color: #23C6C8;
+    color: #FFFFFF;
+    width: 100%;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#addsettingJson:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#modal_saveStrategy {
+    z-index: 20500 !important;
+    top:30%
+}
