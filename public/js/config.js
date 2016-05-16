@@ -224,7 +224,7 @@
         var urls = _XREWIN.prototype.config.urls;
         var services = _XREWIN.prototype.config.services;
         if (this.debug) {
-            services.XREWIN = "http://localhost";
+            services.XREWIN = "http://localhost:3333";
             services.WELLEMAIL = "http://192.168.1.5:8003";
             services.WORKFLOW = "http://192.168.1.5:8116";
             services.SMARTGROUP = "http://192.168.1.5:8117";

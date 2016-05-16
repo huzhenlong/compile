@@ -17,8 +17,15 @@ module.exports = (gulp, config, $, args) => {
         /*gulp.src(config.common)
          .pipe(gulp.dest(config.compile))*/
 
-        gulp.src(`${config.develop}smsTemplate.html`)
-            .pipe(gulp.dest(`${config.release}`));
+        /*gulp.src(`${config.develop}smsTemplate.html`)
+            .pipe(gulp.dest(`${config.release}`));*/
+
+        gulp.src('./public/js/smartgroup/babel.js')
+            .pipe($.babel({
+                presets: ['es2015']
+            }))
+            .pipe($.concat('bundl.js'))
+            .pipe(gulp.dest('./public/js/smartgroup'));
 
     });
 
@@ -56,7 +63,7 @@ module.exports = (gulp, config, $, args) => {
         /*del([
          './public/js/smartgroup/smart.js'
          ]);*/
-        gulp.src('./public/js/smartgroup/smart.js')
+        gulp.src('./public/js/smartgroup/babel.js')
             .pipe($.sourcemaps.init())
             .pipe($.babel({
                 presets: ['es2015']

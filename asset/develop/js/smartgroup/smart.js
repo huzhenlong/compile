@@ -1,23 +1,22 @@
-'use strict';
-
 /**
  * Created by hzl on 2015/10/10.
  */
+import 'babel-polyfill';
 (function ($, window, document, undefined) {
 
-    $.fn.smartGroupFilter = function (setting) {
-        var filterButtons = arguments.length <= 1 || arguments[1] === undefined ? MemberFilters : arguments[1];
-
-        var plugin = this;
+    $.fn.smartGroupFilter = function (setting, filterButtons = MemberFilters) {
+        let plugin = this;
         //region 初始化设置
-        var options = {};
+        let options = {};
 
         //继承smartgroup的options
         if (setting && setting.smartGroup) {
-            options = $.extend({}, setting.smartGroup.options, setting);
+            options = Object.assign({}, setting.smartGroup.options, setting);
         } else {
-            options = $.extend({}, setting);
+            options = Object.assign({}, setting);
         }
+
+
 
         plugin.options = options;
         //endregion
@@ -28,27 +27,41 @@
 
         //region 生成按钮
         //获取按钮的文本text
-        var getObjectValue = function getObjectValue(obj, name, defaultValue) {
+        let getObjectValue = (obj, name, defaultValue) => {
             if (typeof obj == 'undefined' || typeof obj[name] == 'undefined') {
                 return defaultValue;
             }
             return obj[name];
         };
 
-        //创建form
-        var getFilterElements = function getFilterElements(content, column) {
-            var inputBox = '<input class="inputBox validator" type="text" value=""  name="content">';
-            var numberBox = '<input class="numberBox validator" type="number" value="" min="0" name="content">';
-            var numberRange = '<input class="beginNumber validator" type="number">\n                -<input class="endNumber validator" type="number">';
-            var dataBox = '<input class="dataBox validator" type="date" value="" name="content">';
-            var dataRange = '<input class="beginData validator" type="date" value="" name="beginTime">\n                -<input class="endData validator" type="date" value="" name="endTime">';
-            var operationOne = '<select name="operate" class="operate"><option value="like">\n                ' + TxtContent.like + '</option><option value="notLike">' + TxtContent.noLike + '</option><option value="equal">\n                ' + TxtContent.equal + '</option><option value="notEqual">' + TxtContent.noEqual + '</option></select>';
 
-            var operationTwo = '<select name="operate" class="operate"><option value="in">' + TxtContent.in + '\n                </option><option value="notIn">' + TxtContent.noIn + '</option></select>';
-            var operationThree = '<select name="operate" class="operate"><option value="equal">' + TxtContent.equal + '</option>\n                <option value="lessThan">' + TxtContent.lessThan + ' </option><option value="moreThan">' + TxtContent.moreThan + ' </option>\n                <option value="moreThanOrEqual">' + TxtContent.moreThanOrEqual + '</option><option value="lessThanOrEqual">' + TxtContent.lessThanOrEqual + '\n                </option></select>';
-            var operationFour = '<select class="operate timeType"><option value="year">' + TxtContent.year + ' </option>\n                <option value="month">' + TxtContent.month + '  </option><option value="day">' + TxtContent.day + '</option><option value="hour">\n                 ' + TxtContent.hour + '</option></select>';
-            var operationFive = '<select class="operate validator actionType"><option value="">' + TxtContent.sel + '</option><option value="sms">\n                ' + TxtContent.sms + '</option>\n                <option value="email">' + TxtContent.mail + '</option></select><select class="behavior operate validator action"><option value="">\n                 ' + TxtContent.sel + '</option></select>';
-            var operation = '';
+        //创建form
+        let getFilterElements = (content, column) => {
+            let inputBox = `<input class="inputBox validator" type="text" value=""  name="content">`;
+            let numberBox = `<input class="numberBox validator" type="number" value="" min="0" name="content">`;
+            let numberRange = `<input class="beginNumber validator" type="number">
+                -<input class="endNumber validator" type="number">`;
+            let dataBox = `<input class="dataBox validator" type="date" value="" name="content">`;
+            let dataRange = `<input class="beginData validator" type="date" value="" name="beginTime">
+                -<input class="endData validator" type="date" value="" name="endTime">`;
+            let operationOne = `<select name="operate" class="operate"><option value="like">
+                ${TxtContent.like}</option><option value="notLike">${TxtContent.noLike }</option><option value="equal">
+                ${ TxtContent.equal }</option><option value="notEqual">${TxtContent.noEqual }</option></select>`;
+
+            let operationTwo = `<select name="operate" class="operate"><option value="in">${TxtContent.in}
+                </option><option value="notIn">${ TxtContent.noIn }</option></select>`;
+            let operationThree = `<select name="operate" class="operate"><option value="equal">${TxtContent.equal}</option>
+                <option value="lessThan">${TxtContent.lessThan } </option><option value="moreThan">${ TxtContent.moreThan} </option>
+                <option value="moreThanOrEqual">${TxtContent.moreThanOrEqual }</option><option value="lessThanOrEqual">${TxtContent.lessThanOrEqual}
+                </option></select>`;
+            let operationFour = `<select class="operate timeType"><option value="year">${TxtContent.year} </option>
+                <option value="month">${TxtContent.month}  </option><option value="day">${TxtContent.day}</option><option value="hour">
+                 ${TxtContent.hour }</option></select>`;
+            let operationFive = `<select class="operate validator actionType"><option value="">${TxtContent.sel }</option><option value="sms">
+                ${TxtContent.sms }</option>
+                <option value="email">${ TxtContent.mail}</option></select><select class="behavior operate validator action"><option value="">
+                 ${TxtContent.sel }</option></select>`;
+            let operation = '';
             switch (content.type) {
                 case CONTENT_TYPE.INPUT:
                     operation = operationOne + inputBox;
@@ -56,13 +69,19 @@
                 case CONTENT_TYPE.LIST:
                     operationTwo += '<span class="select-group">';
                     $.each(content.urls, function (i, url) {
-                        operationTwo += '<select data-type="' + url.type + '" data-filter-name="' + encodeURIComponent(url.filter_name) + '" style="width:200px;display:block;" data-text="' + encodeURIComponent(url.text) + '" data-url="' + encodeURIComponent(url.url) + '" data-idname="' + url.idName + '" data-textname="' + url.textName + '" data-name="' + encodeURIComponent(url.name) + '" data-datacon=' + JSON.stringify(url.dataCon) + '></select>';
+                        operationTwo += `<select data-type="${url.type}" data-filter-name="${encodeURIComponent(url.filter_name)}"
+                            style="width:200px;display:block;" data-text="${encodeURIComponent(url.text)}"
+                            data-url="${encodeURIComponent(url.url)}"
+                            data-idname="${url.idName}"
+                            data-textname="${url.textName}"
+                            data-name="${encodeURIComponent(url.name)}" data-datacon="${JSON.stringify(url.dataCon)}"></select>`;
                     });
                     operationTwo += "</span>";
                     operation = operationTwo;
                     break;
                 case CONTENT_TYPE.SELECT:
-                    var $sel = $('<select style="width: 100%;padding: 4px;" name="' + content.name + '" class="selVal validator">' + '<option value="">' + TxtContent.sel + '</option></select>');
+                    var $sel = $(`<select style="width: 100%;padding: 4px;" name="${content.name} " class="selVal validator">
+                        <option value="">${ TxtContent.sel} </option></select>`);
                     XREWIN.addOptions(content.dataCon, "value", "text", $sel);
                     operation = $sel[0].outerHTML;
                     break;
@@ -85,16 +104,35 @@
                     operation = operationFive;
                     break;
             }
-            return '<form data-bv-message="This value is not valid" onkeydown="if(event.keyCode==13){return false;}"' + 'id="formData' + column + '" class="formAllData" data-contentType="' + content.type + '">' + operation + '<input name="column" value="' + column + '" hidden></form>';
+
+            return `<form data-bv-message="This value is not valid" onkeydown="if(event.keyCode==13){return false;}"
+                id="formData${column} " class="formAllData" data-contentType="${content.type}">
+                ${operation}<input name="column" value="${column}" hidden /></form>`;
+
+            /*let GetFilterElements = React.createClass({
+             render() {
+             return (
+             <form data-bv-message="This value is not valid" onkeydown="if(event.keyCode==13){return false;}"
+             id="formData{ column}" className="formAllData" data-contentType="{content.type }">
+             { operation }
+             <input name="column" value="{ column }" hidden/>
+             </form>
+             );
+             }
+             });*/
+
+
         };
 
+
         //创建弹出框内容
-        var getContent = function getContent(button) {
+        var getContent = function (button) {
             var btnText = getObjectValue(button, "text", "属性");
             var content = '<div><div class="btn-group filter-types">';
             content += '<button class="btn btn-success" data-iclass="fa-filter" title="' + TxtContent.filter + '"><i class="fa fa-filter"></i></button>';
             content += '<button class="btn btn-white" data-iclass="fa-plus" title="' + TxtContent.plus + '"><i class="fa fa-plus"></i></button>';
-            content += '<button class="btn btn-white" data-iclass="fa-minus" title="' + TxtContent.minus + '"><i class="fa fa-minus"></i></button>' + '<span class="filterName">' + btnText + '</span></div>';
+            content += '<button class="btn btn-white" data-iclass="fa-minus" title="' + TxtContent.minus + '"><i class="fa fa-minus"></i></button>' +
+                '<span class="filterName">' + btnText + '</span></div>';
             content += '<div style="padding: 5px 0 10px;">';
             content += getFilterElements(button.content, button.column);
             content += '</div>';
@@ -106,7 +144,7 @@
         };
 
         //组建按钮
-        var buildBtn = function buildBtn(row) {
+        var buildBtn = function (row) {
             var content = '';
             for (var i = 0; i < row.buttons.length; i++) {
                 var button = row.buttons[i];
@@ -120,7 +158,7 @@
         };
 
         //创建按钮组
-        var getRowButtons = function getRowButtons(row) {
+        var getRowButtons = function (row) {
             var content = '<tr class="popover-options">';
             content += '<td style="vertical-align: text-top;"><label class="sm-row-name">' + row.name + '：</label></td><td>';
             content += buildBtn(row);
@@ -129,12 +167,12 @@
         };
 
         //创建tab标题
-        var createTabTitle = function createTabTitle(row) {
+        var createTabTitle = function (row) {
             return '<li><a data-toggle="tab" href="#' + row.value + '" aria-expanded="false">' + row.name + '</a></li>';
         };
 
         //创建tab内容
-        var createTabContent = function createTabContent(row) {
+        var createTabContent = function (row) {
             var content = '<div id="' + row.value + '" class="tab-pane"><div class="panel-body sg-body">';
             content += buildBtn(row);
             content += '</div></div>';
@@ -142,7 +180,7 @@
         };
 
         //多级下拉框
-        var select2Func = function select2Func(select, parent) {
+        var select2Func = function (select, parent) {
 
             var url = decodeURIComponent(select.data('url'));
             var name = decodeURIComponent(select.data('filter-name'));
@@ -153,7 +191,7 @@
 
                 if (names) {
                     for (var keyName in names) {
-                        if (keyName && typeof keyName == 'string') {
+                        if (keyName && typeof  keyName == 'string') {
                             if (names.hasOwnProperty(keyName)) {
                                 url = XREWIN.appendParam(url, keyName, names[keyName].join(','));
                             }
@@ -161,7 +199,7 @@
                     }
                 }
                 var key = XREWIN.getUrlParam("key");
-                url = XREWIN.append;
+                url = XREWIN.append
                 Param(url, "group_key", key);
             }
             var text = decodeURIComponent(select.data('text'));
@@ -222,7 +260,8 @@
 
         var filtering = null;
         //初始化
-        var init = function init(groupKey) {
+        var init = function (groupKey) {
+
             //判断应用场景
             var scene = plugin.options.scene;
             if (scene == 'modal') {
@@ -246,11 +285,12 @@
                 }
             }
 
+
             //把内容添加到按钮上
-            var pops = plugin.find("button").popover({ html: true, trigger: 'click' });
+            var pops = plugin.find("button").popover({html: true, trigger: 'click'});
 
             //关闭弹框
-            var closePop = function closePop() {
+            var closePop = function () {
                 if (filtering == null) {
                     console.log("closePop.filtering is null");
                     return;
@@ -281,8 +321,9 @@
                 //判断点击不同的按钮
                 if (filtering) {
                     if (filtering.data("filter-table") == table && filtering.data("filter-column") == column) {
-                        console.debug("click same button");
-                    } else {
+                        console.debug("click same button")
+                    }
+                    else {
                         filtering.removeClass("btn-success").addClass("btn-white");
                         filtering.click();
                     }
@@ -307,9 +348,18 @@
                 tip.find(".actionType").on("change", function () {
                     var sel = tip.find(".action");
                     if ($(this).val() == "sms") {
-                        sel.empty().append('<option value="sendSuccess">' + TxtContent.sendSuccess + '</option>' + '<option value="invalidTel">' + TxtContent.invalidTel + '</option><option value="click">' + TxtContent.click + '</option>');
-                    } else if ($(this).val() == "email") {
-                        sel.empty().append('<option value="sendSuccess">' + TxtContent.sendSuccess + '</option>' + '<option value="open">' + TxtContent.open + '</option><option value="click">' + TxtContent.click + '</option>' + '<option value="filterCount">' + TxtContent.filterCount + '</option><option value="formatError">' + TxtContent.formatError + '</option>' + '<option value="onceSubmitRepeat">' + TxtContent.onceSubmitRepeat + '</option><option value="sendUnreg">' + TxtContent.sendUnreg + '</option>' + '<option value="sendInvalid">' + TxtContent.sendInvalid + '</option><option value="backEmail">' + TxtContent.backEmail + '</option>' + '<option value="emailAddressInvalid">' + TxtContent.emailAddressInvalid + '</option><option value="serverReject">' + TxtContent.serverReject + '</option>' + '<option value="unreg">' + TxtContent.unreg + '</option>');
+                        sel.empty().append('<option value="sendSuccess">' + TxtContent.sendSuccess + '</option>'
+                            + '<option value="invalidTel">' + TxtContent.invalidTel + '</option><option value="click">' + TxtContent.click + '</option>');
+                    }
+                    else if ($(this).val() == "email") {
+                        sel.empty().append('<option value="sendSuccess">' + TxtContent.sendSuccess + '</option>' +
+                            '<option value="open">' + TxtContent.open + '</option><option value="click">' + TxtContent.click + '</option>' +
+                            '<option value="filterCount">' + TxtContent.filterCount + '</option><option value="formatError">' + TxtContent.formatError + '</option>' +
+                            '<option value="onceSubmitRepeat">' + TxtContent.onceSubmitRepeat + '</option><option value="sendUnreg">' + TxtContent.sendUnreg + '</option>' +
+                            '<option value="sendInvalid">' + TxtContent.sendInvalid + '</option><option value="backEmail">' + TxtContent.backEmail + '</option>' +
+                            '<option value="emailAddressInvalid">' + TxtContent.emailAddressInvalid + '</option><option value="serverReject">' + TxtContent.serverReject + '</option>' +
+                            '<option value="unreg">' + TxtContent.unreg + '</option>'
+                        );
                     }
                 });
 
@@ -360,7 +410,7 @@
                     fd.append("relationType", objData.iClass);
                     fd.append("type", contentType);
                     fd.append("groupKey", groupKey);
-                    var dataContent = { "mark": true };
+                    var dataContent = {"mark": true};
                     switch (contentType) {
                         case "relative-time":
                             dataContent.timeInterval = tip.find(".timeInterval").val();
@@ -391,7 +441,7 @@
                             var inputVal = tip.find(".inputBox").val();
                             produceText += '<b>' + nameText + '</b><em>' + operation + '</em>' + inputVal;
                             break;
-                        case "list":
+                        case  "list":
                             tip.find('.select-group select').each(function () {
                                 var sel = $(this);
                                 var arrayVal = sel.select2("data");
@@ -439,8 +489,7 @@
                             break;
                     }
 
-                    var stringVal,
-                        zoneList = {};
+                    var stringVal, zoneList = {};
                     tip.find('.select-group select').each(function () {
                         var sel_group = $(this);
                         var selName = sel_group.data("name");
@@ -462,6 +511,7 @@
                         fd.append("content", stringVal);
                     }
 
+
                     //判断table的智能分组
                     if (typeof plugin.options.func == "function") {
                         var row = {
@@ -478,8 +528,9 @@
                         }
                         fd.append("parentId", curNodeId || 'parentId');
 
+
                         //添加节点数据
-                        var addNode = function addNode(fd) {
+                        var addNode = function (fd) {
                             if (options.smartGroup) {
                                 options.smartGroup.addNode(fd, function () {
                                     var data = this.split(',');
@@ -493,11 +544,13 @@
                             }
                         };
 
+
                         //判断input的值是否为空
                         var inputCon = conType.find(".validator").val();
                         var area = conType.find(".select2-selection__rendered").text();
                         if (!inputCon) {
-                            conType.find(".validator").css({ "border": "1px solid red", "padding-left": "5px" }).attr("placeholder", TxtContent.dataIsNull);
+                            conType.find(".validator").css({"border": "1px solid red", "padding-left": "5px"})
+                                .attr("placeholder", TxtContent.dataIsNull);
                             if (area) {
                                 //添加节点
                                 addNode(fd);
@@ -518,9 +571,12 @@
             });
         };
 
+
         //初始化
         init(plugin.options.groupKey || '');
 
         return plugin;
-    };
+    }
 })(jQuery, window, document);
+
+

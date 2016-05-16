@@ -18,7 +18,7 @@ var work_flow_model = new FormModal({
             }
         },
         {
-            "labelName": TxtContent.work.labelName10,
+            "labelName": TxtContent.work.labelName11,
             "type": "select",
             "name": "brandKey",
             "selectOptions": {

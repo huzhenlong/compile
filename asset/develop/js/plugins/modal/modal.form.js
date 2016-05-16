@@ -13,7 +13,7 @@
             //字典
             sms_btn_dict: {},
             elements_dict: {},
-            title: TxtContent.modal.title ,
+            title: TxtContent.modal.title,
             elements: [],
             autoDestroy: false,
             submitBtn: TxtContent.modal.submitBtn,
@@ -203,7 +203,7 @@
                             returnValue = element.$element.find("[name=" + name + "]").val();
                             break;
                     }
-                    return returnValue;
+                    return returnValue == null ? "" : returnValue;
                 }
             }
         },
@@ -573,8 +573,8 @@
                             editarea.append(that.parseSmsContent(sms_txt));
                         }
                         $inputBox = $('<div style="position: relative;"></div>').append('<div id="personSet">' +
-                            '<a href="javascript:void(0)" type="submit" style="margin-right: 5px;" id="setSmsPersonality">'+TxtContent.modal.smsPersonality+'</a>' +
-                            '<a href="javascript:void(0)" id="cancelSmsPersonality">'+TxtContent.modal.cancelSmsPersonality+'</a></div>',
+                            '<a href="javascript:void(0)" type="submit" style="margin-right: 5px;" id="setSmsPersonality">' + TxtContent.modal.smsPersonality + '</a>' +
+                            '<a href="javascript:void(0)" id="cancelSmsPersonality">' + TxtContent.modal.cancelSmsPersonality + '</a></div>',
                             editarea, content_box, inputSMS);
                         $inputBox.find(".readbtns").each(function () {
                             var tempArea = editarea;
@@ -622,11 +622,11 @@
                                     radioWrap = '<input type="radio" data-type="radio-date" name="' + element["name"] + '"' +
                                         'style="float: left;margin: 10px 10px 10px 0;">' +
                                         '<nav class="input-daterange input-group">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.wait+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.wait + '</span>' +
                                         '<input type="text" class="input-sm form-control" name="radio_start">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.day+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.day + '</span>' +
                                         '<input type="text" class="input-sm form-control" name="radio_end">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.hourLater+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.hourLater + '</span>' +
                                         '</nav>';
                                     radioDateWrap.append(radioWrap);
                                     break;
@@ -634,11 +634,11 @@
                                     radioWrap = '<input type="radio" data-type="radio-date" name="' + element["name"] + '"' +
                                         'style="float: left;margin: 10px 10px 10px 0;"/>' +
                                         '<nav class="input-daterange input-group">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.wait+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.wait + '</span>' +
                                         '<input type="text" class="input-sm form-control" name="radio_start">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.dayLater+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.dayLater + '</span>' +
                                         '<input type="text" class="input-sm form-control" name="radio_end">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.hour+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.hour + '</span>' +
                                         '</nav>';
                                     radioDateWrap.append(radioWrap);
                                     break;
@@ -646,11 +646,11 @@
                                     radioWrap = '<input type="radio" data-type="radio-date" name="' + element["name"] + '"' +
                                         'style="float: left;margin: 10px 10px 10px 0;"/>' +
                                         '<nav class="input-daterange input-group">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.wait+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.wait + '</span>' +
                                         '<input type="date" class="input-sm form-control" name="radio_start">' +
                                         '<span class="input-group-addon">-</span>' +
                                         '<input type="time" class="input-sm form-control" name="radio_end">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.end+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.end + '</span>' +
                                         '</nav>';
                                     radioDateWrap.append(radioWrap);
                                     break;
@@ -658,18 +658,18 @@
                                     var txt;
                                     if ($(".wait-date-text", $inputBox[0]).length == 0) {
                                         txt = '<div class="wait-date-text" style="font-weight: bold;margin: 10px 0;">' +
-                                            TxtContent.modal.timeBucket+'</div>';
+                                            TxtContent.modal.timeBucket + '</div>';
                                     } else {
                                         txt = '';
                                     }
                                     radioWrap = txt + '<input type="radio" data-type="radio-date" name="' + element["name"] + '"' +
                                         'style="float: left;margin: 10px 10px 10px 0;"/>' +
                                         '<nav class="input-daterange input-group">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.curDay+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.curDay + '</span>' +
                                         '<input type="time" class="input-sm form-control" name="radio_start">' +
                                         '<span class="input-group-addon">-</span>' +
                                         '<input type="time" class="input-sm form-control" name="radio_end">' +
-                                        '<span class="input-group-addon">'+TxtContent.modal.exe+'</span>' +
+                                        '<span class="input-group-addon">' + TxtContent.modal.exe + '</span>' +
                                         '</nav>';
                                     radioDateWrap.append(radioWrap);
                                     break;
@@ -903,7 +903,7 @@
                             break;
                         case "number":
                             validators["numeric"] = {
-                                message:  TxtContent.modal.num
+                                message: TxtContent.modal.num
                             };
                             break;
                         case "email":
